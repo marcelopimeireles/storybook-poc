@@ -9,3 +9,5 @@ lib
 **/*.tsbuildinfo*
 /src/**/*.scss.d.ts
 deployments
+**/.DS_Store
+.DS_Store
