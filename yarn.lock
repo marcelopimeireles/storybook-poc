@@ -10459,10 +10459,10 @@
   "resolved" "https://registry.npmjs.org/sdb-dd-styles/-/sdb-dd-styles-0.0.18.tgz"
   "version" "0.0.18"
 
-"sdb-dd-webcomponents@^0.0.18":
-  "integrity" "sha512-DGioiwT17eODbpZh2ob9EWwytL4cETMQlV/A/wYs4uJHCB/QLxRPStbbu9eRHopI92gDcse17Vp3l1wTpKjByw=="
-  "resolved" "https://registry.npmjs.org/sdb-dd-webcomponents/-/sdb-dd-webcomponents-0.0.18.tgz"
-  "version" "0.0.18"
+"sdb-dd-webcomponents@^0.0.19":
+  "integrity" "sha512-LU8LpiSZ2Lyh6XnwuOuONbcTEdKiVr5UHhSEt2KAhq4xxWwBJ803T/BAPiYzHLccVjtl7CQEF0qi8Y0GFn/v7Q=="
+  "resolved" "https://registry.npmjs.org/sdb-dd-webcomponents/-/sdb-dd-webcomponents-0.0.19.tgz"
+  "version" "0.0.19"
   dependencies:
     "lit-element" "^2.5.1"
     "sdb-dd-styles" "^0.0.18"
