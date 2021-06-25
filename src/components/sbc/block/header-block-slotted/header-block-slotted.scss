@@ -1,0 +1,51 @@
+* {
+  box-sizing: border-box;
+}
+
+.sr-header-block-slotted {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  position: relative;
+  margin-bottom: 21px;
+  align-items: center;
+
+  .sr-header-block__title,
+  ::slotted([slot=title_area]) {
+    color: var(--srui-gray4-color, #545454);
+    font-size: 1.25rem;
+    font-weight: 500;
+    letter-spacing: 0;
+    line-height: var(--srui-default-line-height, 1);
+  }
+
+  ::slotted([slot=back_button_area]),
+  ::slotted([slot=right_button_area]),
+  button {
+    -webkit-appearance: none;
+    background-color: transparent;
+    border: none;
+    display: flex;
+    cursor: pointer;
+    font-size: 2rem;
+    overflow: hidden;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    position: relative;
+    top: 2px;
+    margin-left: -17px;
+
+    &:focus {
+      -webkit-appearance: none;
+      outline: none;
+    }
+  }
+
+  ::slotted([slot=right_button_area]) {
+    position: absolute;
+    right: -14px;
+    top: 2px;
+  }
+}
+

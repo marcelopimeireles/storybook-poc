@@ -1,0 +1,55 @@
+* {
+  box-sizing: border-box;
+}
+.sr-extra-sim-option-card {
+  position: relative;
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  background-color: var(--srui-white-color, #ffffff);
+  align-items: center;
+  justify-content: space-between;
+  height: 176px;
+  border-bottom: 1px solid var(--srui-alpha-color-active, #EEEEEE);
+  padding: 23px 17px;
+  border-radius: 6px;
+  > div {
+      display: flex;
+      justify-content: space-between;
+      position: relative;
+      width: 100%;
+    &:first-child {
+      margin-bottom: 4px;
+    }
+  }
+  &__content {
+    flex-direction: column;
+    margin-bottom: 16px;
+  }
+  &__title {
+    font-size: 1.125rem;
+    color: var(--srui-primary-color, #E6003C);
+    font-weight: 700;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  &__sub-title {
+    font-size: 0.875rem;
+    font-weight: 400;
+    color: var(--srui-gray4-color, #545454);
+  }
+  &__description {
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: var(--srui-gray4-color, #545454);
+  }
+  ::slotted([slot=button_area]) {
+    width: 170px;
+  }
+  &__price {
+    font-size: 2.1275rem;
+    line-height: 1;
+    color: var(--srui-gray4-color, #545454);
+  }
+}

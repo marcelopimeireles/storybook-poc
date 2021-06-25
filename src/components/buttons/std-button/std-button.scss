@@ -1,0 +1,184 @@
+* {
+    box-sizing: border-box;
+}
+:host {
+    display: inline-flex;
+}
+.sr-std-button {
+    font-family: var(--srui-default-font-family, 'AvenirNext');
+    display: inline-flex;
+    flex: 1 1 auto;
+    align-items: center;
+    justify-content: center;
+    height: 56px;
+    border-radius: 36px;
+    -webkit-appearance: none;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    background-color: transparent;
+    position: relative;
+    margin: 0 auto;
+    padding: 0 20px;
+    width: 100%;
+}
+.sr-std-button__background {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 0;
+    border-radius: 36px;
+    transition: all 250ms cubic-bezier(.27,.01,.38,1.06);
+}
+.sr-std-button__label {
+    color: var(--srui-white-color, #ffffff);
+    font-size: 1rem;
+    letter-spacing: 0;
+    line-height: var(--srui-default-line-height);
+    position: relative;
+}
+/*COLORS & HOVERS*/
+.sr-std-button--white-color .sr-std-button__background,
+.sr-std-button--white-color:hover:active .sr-std-button__background{
+    box-shadow: 0 4px 12px 0 rgba(0,0,0,0.1);
+}
+.sr-std-button--alpha-color .sr-std-button__background {
+    background-color: var(--srui-alpha-color, transparent);
+}
+.sr-std-button--white-color .sr-std-button__label,
+.sr-std-button--alpha-color .sr-std-button__label {
+    color: var(--srui-dark-color, #333333);
+}
+.sr-std-button:hover:active .sr-std-button__background {
+    filter: brightness(100%);
+}
+.sr-std-button:hover .sr-std-button__background {
+    filter: brightness(90%);
+}
+.sr-std-button--white-color:hover .sr-std-button__background {
+    filter: brightness(100%);
+    box-shadow: 0 8px 24px 0 rgba(0,0,0,0.1);
+}
+.sr-std-button--alpha-color:hover .sr-std-button__background {
+    filter: brightness(100%);
+    background-color: var(--srui-bright-color, #F8F8F8) !important;
+}
+.sr-std-button--alpha-color:hover:active .sr-std-button__background {
+    background-color: var(--srui-alpha-color-active, #EEEEEE) !important;
+}
+.sr-std-button.sr-std-button--lighter-hover:hover .sr-std-button__background {
+    filter: brightness(110%);
+}
+.sr-std-button.sr-std-button--lighter-hover:hover:active .sr-std-button__background {
+    filter: brightness(100%);
+}
+/*DISABLED*/
+.sr-std-button[disabled] {
+    pointer-events: none;
+    cursor: none;
+}
+.sr-std-button[disabled] .sr-std-button__label,
+.sr-std-button[disabled] .sr-std-button__background {
+    opacity: .5;
+}
+.sr-std-button--white-color[disabled] .sr-std-button__background {
+    opacity: 1;
+    border: 1px solid #EEEEEE;
+    box-shadow: none;
+}
+.sr-std-button[disabled] srui-icon{
+    opacity: 0.7;
+}
+/*SIZES*/
+/*LARGE*/
+.sr-std-button--size-large {
+    height: 64px;
+
+    .sr-std-button__label {
+        font-size: 1.125rem;
+    }
+}
+/*SMALL*/
+.sr-std-button--size-small {
+    height: 48px;
+}
+/*TINY*/
+.sr-std-button--size-tiny {
+    height: 40px;
+    
+    .sr-std-button__label {
+        font-size: 0.875rem;
+    }
+    
+    .sr-std-button__icon-holder {
+        width: 20px;
+        height: 20px;
+    }
+
+    .sr-std-button__icon-holder span{
+        font-size: 1.4rem;
+    }
+}
+/*ICON*/
+.sr-std-button srui-icon {
+    position: relative;
+    margin-right: 6px;
+}
+.sr-std-button--rounded {
+    height: 56px;
+    width: 56px;
+    border-radius: 50%;
+    
+    &.sr-std-button--size-large {
+        height: 64px;
+        width: 64px;
+    }
+
+    &.sr-std-button--size-small {
+        height: 48px;
+        width: 48px;
+    }
+
+    &.sr-std-button--size-tiny {
+        height: 40px;
+        width: 40px;
+    }
+
+    srui-icon {
+        margin: 0;
+    }
+}
+/*LOADER*/
+.sr-std-button__loader {
+    position: relative;
+    width: 20px;
+    height: 20px;
+    margin-right: 6px;
+    display: none;
+}
+.sr-std-button--loading {
+    .sr-std-button__loader {
+        display: block;
+    }
+
+    &.sr-std-button--solo-loader .sr-std-button__loader,
+    &.sr-std-button--rounded .sr-std-button__loader {
+        margin-right: 0;
+    }
+
+    &.sr-std-button--solo-loader .sr-std-button__label,
+    &.sr-std-button--solo-loader srui-icon,
+    &.sr-std-button--rounded srui-icon {
+        display: none;
+    }
+}
+@media only screen and (max-width: 640px) {
+    .sr-std-button {
+        height: 3rem;
+    }
+    .sr-std-button--size-tiny {
+        height: 2.5rem;
+    }
+}

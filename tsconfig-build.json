@@ -1,0 +1,20 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "declarationMap": false,
+    "sourceMap": false,
+    "inlineSources": false,
+    "rootDirs": ["src"],
+    "outDir": "./lib",
+    "tsBuildInfoFile": "lib/.tsbuildinfo",
+    "rootDir": "src",
+    "resolveJsonModule": true
+  },
+  "include": [
+    "src/**/*.ts"
+  ],
+  "exclude": [
+    "src/**/*.test.ts",
+    "src/mock-components/**/*"
+  ]
+}

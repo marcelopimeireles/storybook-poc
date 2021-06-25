@@ -1,0 +1,57 @@
+* {
+  box-sizing: border-box;
+}
+.sr-user-card {
+  position: relative;
+  display: flex;
+  width: 100%;
+  margin-bottom: 20px;
+}
+.sr-user-card__patch {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background-color: var(--srui-primary-color, #E6003C);
+  color: #FFFFFF;
+  font-size: 1.5rem;
+  font-weight: 700;
+  letter-spacing: 0;
+  line-height: var(--srui-default-line-height, 1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 12px;
+}
+/*TODO Allow just 2 letters*/
+/*.sr-user-card__patch ::slotted(span){*/
+  /*width: 2ch;*/
+  /*overflow: hidden;*/
+  /*white-space: nowrap;*/
+  /*text-transform: uppercase;*/
+/*}*/
+.sr-user-card__info-holder {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+.sr-user-card__name {
+  color: var(--srui-black-color, #000000);
+  font-size: 1.125rem;
+  font-weight: 700;
+  letter-spacing: 0;
+  line-height: 1.7;
+  display: block;
+  max-width: 16ch;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  margin: -5px 0 -1px;
+}
+.sr-user-card__role {
+  color: #575452;
+  font-size: 0.813rem;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: var(--srui-default-line-height, 1);
+}

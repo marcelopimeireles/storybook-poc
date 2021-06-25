@@ -1,0 +1,56 @@
+* {
+  box-sizing: border-box;
+}
+.sr-menu-group {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 0 20px;
+  background-color: var(--srui-white-color, #ffffff);
+  border-bottom: 1px solid var(--srui-gray1-color, #E5E5E5);
+  srui-icon {
+    transition: all 250ms cubic-bezier(.27,.01,.38,1.06);
+  }
+  &__label {
+    font-size: 1rem;
+    line-height: 1;
+    color: var(--srui-gray4-color, #545454);
+    font-weight: 700;
+    padding-right: 4px;
+    padding-top: 4px;
+  }
+  &__header {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    height: 45px;
+    position: relative;
+  }
+  &__click-area {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 1;
+    cursor: pointer;
+  }
+  &__sub-items-holder {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    max-height: 0;
+    overflow: hidden;
+    transition: all 250ms cubic-bezier(.27,.01,.38,1.06);
+  }
+  &__sub-items-content {
+    width: 100%;
+    padding: 10px 0;
+  }
+  &--open {
+    srui-icon {
+      transform: rotate(180deg);
+    }
+  }
+}

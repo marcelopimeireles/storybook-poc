@@ -1,0 +1,206 @@
+* {
+  box-sizing: border-box;
+}
+
+.sr-account-card {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  font-family: var(--srui-default-font-family, 'AvenirNext');
+  background-color: var(--srui-white-color, #FFFFFF);
+  border-radius: var(--srui-content-box-radius, 6px);
+  box-shadow: var(--srui-default-shadow, 0 2px 4px 0 rgba(0,0,0,0.05));
+  padding: 10px 69px 10px 10px;
+  height: auto;
+  min-height: 70px;
+  position: relative;
+  cursor: pointer;
+  transition: all 250ms cubic-bezier(.27,.01,.38,1.06);
+
+  &:hover {
+    box-shadow: var(--srui-hover-shadow, 0 4px 12px 0 rgba(0,0,0,0.1));
+    z-index: 1;
+    .arrow-icon {
+      color: var(--srui-black-color, #000000);
+    }
+  }
+  .arrow-icon {
+    transition: all 250ms cubic-bezier(.27,.01,.38,1.06);
+    color: var(--srui-gray2-color, #ADADAD);
+  }
+  &__title {
+    font-weight: 700;
+    color: var(--srui-black-color, #000000);
+    letter-spacing: 0;
+    line-height: 1.3rem;
+  }
+  &__sub-title {
+    font-size: 0.8125rem;
+    font-weight: 500;
+    color: var(--srui-gray3-color, #848484);
+    letter-spacing: 0;
+    line-height: var(--srui-default-line-height, 1);
+    letter-spacing: 0;
+    margin-top: 4px;
+  }
+  &__holder-location {
+    display: none;
+  }
+  &__holder-title,
+  &__holder-active,
+  &__holder-sub,
+  &__holder-actions,
+  ::slotted([slot=extra_content]){
+    display: flex;
+    align-items: center;
+    font-size: 0.875rem;
+    transition: width 250ms cubic-bezier(.27,.01,.38,1.06);
+  }
+  &__holder-title{
+    align-items: center;
+    flex-grow: 1;
+  }
+  &__text-content {
+    text-align: left;
+    padding-left: 5px;
+  }
+  &__holder-location {
+    color: var(--srui-black-color, #000000);
+    font-weight: 500;
+    letter-spacing: 0;
+    line-height: var(--srui-default-line-height, 1);
+    align-items: center;
+  }
+  &__holder-active {
+    color: var(--srui-valid-color, #00D9A2);
+    font-weight: 700;
+    line-height: var(--srui-default-line-height, 1);
+    display: none;
+  }
+  &__holder-sub {
+    width: 70px;
+    color: var(--srui-primary-color, #E6003C);
+    font-weight: 600;
+    line-height: var(--srui-default-line-height, 1);
+    * {
+      white-space: nowrap;
+      color: var(--srui-primary-color, #E6003C);
+    }
+  }
+  &__holder-actions {
+    justify-content: flex-end;
+  }
+  &__holder-sub-button {
+    display: flex;
+    align-items: center;
+    font-size: 1rem;
+    
+    &-icon {
+      width: 30px;
+    }
+
+    span {
+      display: none;
+    }
+  }
+
+  .sr-account-card__holder-title,
+  .sr-account-card__holder-location,
+  .sr-account-card__holder-active,
+  .sr-account-card__holder-sub,
+  ::slotted([slot=extra_content]){
+    flex-shrink: 0;
+  }
+  .sr-account-card__holder-location{
+    min-height: 32px;
+  }
+  .sr-account-card__holder-active{
+    padding-left: 8px;
+    min-height: 32px;
+  }
+  .sr-account-card__holder-actions {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  &--main-account .sr-account-card__holder-active,
+  &--sub-active:not(.sr-account-card--main-account) .sr-account-card__holder-sub{
+      min-height: 0;
+      width: 0;
+      height: 0;
+      overflow: hidden;
+      z-index: -1;
+  }
+
+  @media only screen and (min-width: 724px) {
+    min-height: 80px;
+    padding: 10px 69px 10px 15px;
+
+    &__title,
+    &__holder-location,
+    &__holder-sub,
+    ::slotted([slot=extra_content]){
+      font-size: 1rem;
+    }
+    &__sub-title {
+      font-size: 0.875rem;
+    }
+    .sr-account-card__holder-title{
+      width: 320px;
+      flex-grow: 0;
+      margin-right: 10px;
+    }
+    .sr-account-card__text-content {
+      padding-left: 12px;
+    }
+    .sr-account-card__holder-location,
+    ::slotted([slot=extra_content]){
+      display: flex;
+      flex-grow: 1;
+    }
+    &.sr-account-card--sub-active {
+      .sr-account-card__holder-location {
+        flex-grow: 0;
+        width: 200px;
+      }
+
+      .sr-account-card__holder-active{
+        display: flex;
+        flex-grow: 1;
+        font-size: 1rem;
+      }
+    }
+    &__title {
+      max-width: 280px;
+      text-overflow:ellipsis;
+      white-space: nowrap;
+      overflow: hidden;
+    }
+  }
+
+  @media only screen and (min-width: 1024px) {
+    .sr-account-card__holder-title{
+
+    }
+    .sr-account-card__holder-sub{
+      width: 240px;
+    }
+    ::slotted([slot=extra_content]) {
+      padding: 0 25px;
+      flex-grow: 1;
+    }
+    &__holder-sub-button {
+      span {
+        margin-left: 4px;
+        display: inline;
+      }
+    }
+    &__sub-label {
+      display: inline;
+    }
+    
+
+  }
+}

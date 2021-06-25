@@ -1,0 +1,11 @@
+node_modules
+dist
+storybook-static
+.idea
+package-lock.json
+.jest-test-results.json
+lib
+/test/lib/
+**/*.tsbuildinfo*
+/src/**/*.scss.d.ts
+deployments

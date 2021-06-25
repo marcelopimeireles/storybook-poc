@@ -1,0 +1,135 @@
+
+* {
+  box-sizing: border-box;
+}
+:host {
+  display: inline-flex;
+}
+.sr-link {
+  display: inline-flex;
+  align-items: center;
+  border: none;
+  cursor: pointer;
+  background-color: transparent;
+  font-family: var(--srui-default-font-family, 'AvenirNext');
+  font-size: 1rem;
+  font-weight: 600;
+  transition: all 250ms cubic-bezier(.27,.01,.38,1.06);
+  position: relative;
+  text-decoration: none;
+  &--light-text {
+    font-weight: 500;
+    &.sr-link--active {
+      font-weight: 700;
+    }
+  }
+  &--large{
+    font-size: 1.125rem;
+  }
+  &--small{
+    font-size: 0.875rem;
+    .sr-link__icon {
+      height: 16px;
+    }
+  }
+  &--inherit{
+    font-size: inherit;
+  }
+  &__icon {
+    height: 24px;
+    margin-top: 2px;
+    margin-right: 3px;
+    display: inline-flex;
+    align-items: center;
+  }
+  &--primary{
+    color: var(--srui-primary-color, #E6003C);
+    &:hover {
+      color: var(--srui-link-primary-hover, #FF0043);
+      border-color: var(--srui-link-primary-hover, #FF0043);
+    }
+  }
+  &--gray{
+    color: var(--srui-gray3-color, #848484);
+    &:hover {
+      color: var(--srui-black-color, #000000);
+      border-color: var(--srui-black-color, #000000);
+    }
+  }
+  &--light-gray{
+    color: var(--srui-gray2-color, #ADADAD);
+    &:hover {
+      color: var(--srui-gray4-color, #545454);
+    }
+  }
+  &--black{
+    color: var(--srui-black-color, #000000);
+    &:hover {
+      color: var(--srui-gray3-color, #848484);
+    }
+  }
+  &--active {
+    color: var(--srui-primary-color, #E6003C) !important;
+    pointer-events: none;
+  }
+  &--underline {
+    &:after {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 1px;
+      bottom: 2px;
+    }
+    &.sr-link--primary {
+      &:after {
+        background-color: #E6003C;
+      }
+      &:hover:after {
+        background-color: #FF0043;
+      }
+    }
+    &.sr-link--gray {
+      &:after {
+        background-color: #848484;
+      }
+      &:hover:after {
+        background-color: #000000;
+      }
+    }
+    &.sr-link--light-gray {
+      &:after {
+        background-color: #ADADAD;
+      }
+      &:hover:after {
+          background-color: #545454;
+      }
+    }
+    &.sr-link--black {
+      &:after {
+        background-color: #000000;
+      }
+      &:hover:after {
+        background-color: #848484;
+      }
+    }
+    &.sr-link--active {
+      &:after {
+        background-color: #E6003C;
+      }
+      &:hover:after {
+        background-color: #E6003C;
+      }
+    }
+    .sr-link__icon {
+      display: none;
+    }
+    font-weight: 500;
+  }
+  .sr-link__counter{
+    margin-left: 4px;
+  }
+  &__external-icon {
+    margin-left: 4px;
+    margin-top: 4px;
+  }
+}

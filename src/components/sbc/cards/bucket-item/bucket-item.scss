@@ -1,0 +1,28 @@
+* {
+  box-sizing: border-box;
+}
+.sr-bucket-item {
+  position: relative;
+  display: flex;
+  width: 100%;
+  background-color: var(--srui-white-color, #ffffff);
+  margin-bottom: 5px;
+  &__icon {
+
+  }
+  &__type {
+    font-size: 0.875rem;
+    line-height: 1;
+    color: var(--srui-gray4-color, #545454);
+    font-weight: 700;
+    padding-right: 4px;
+    padding-top: 4px;
+  }
+  &__description {
+    padding-top: 4px;
+    font-size: 0.875rem;
+    font-weight: 500;
+    line-height: 1.2;
+    color: var(--srui-gray4-color, #545454);
+  }
+}

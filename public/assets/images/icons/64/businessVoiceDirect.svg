@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="64px" height="64px" viewBox="0 0 64 64" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Icon/64/Business Voice Direct</title>
+    <g id="Icon/64/Business-Voice-Direct" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Business-Voice-Direct" transform="translate(18.000000, 9.000000)" fill="#E6003C">
+            <path d="M2,21 L2,24 C2,30.627417 7.372583,36 14,36 C20.627417,36 26,30.627417 26,24 L26,24 L26,21 L28,21 L28,24 C27.9977486,30.5741892 23.421478,36.2612455 17,37.67 L17,37.67 L17,44 L22,44 L22,46 L6,46 L6,44 L11,44 L11,37.67 C4.57852203,36.2612455 0.00225143044,30.5741892 0,24 L0,24 L0,21 L2,21 Z M15,38 L13,38 L13,44 L15,44 L15,38 L15,38 Z M14,0 C18.9705627,0 23,4.02943725 23,9 L23,9 L23,24 C23,28.9705627 18.9705627,33 14,33 C9.02943725,33 5,28.9705627 5,24 L5,24 L5,9 C5,4.02943725 9.02943725,0 14,0 Z M14,2 C10.1340068,2 7,5.13400675 7,9 L7,9 L7,11 L12,11 L12,13 L7,13 L7,16 L12,16 L12,18 L7,18 L7,21 L12,21 L12,23 L7,23 L7,24 C7,27.8659932 10.1340068,31 14,31 C17.8659932,31 21,27.8659932 21,24 L21,24 L21,9 C21,5.13400675 17.8659932,2 14,2 Z" id="Combined-Shape"></path>
+        </g>
+    </g>
+</svg>

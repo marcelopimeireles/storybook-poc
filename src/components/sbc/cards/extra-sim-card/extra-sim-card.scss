@@ -1,0 +1,57 @@
+* {
+  box-sizing: border-box;
+}
+.sr-extra-sim-card {
+  position: relative;
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  background-color: var(--srui-white-color, #ffffff);
+  justify-content: space-between;
+  height: 88px;
+  border-bottom: 1px solid var(--srui-alpha-color-active, #eeeeee);
+  margin-bottom: 15px;
+  >div {
+    display: flex;
+    &:first-child {
+      width: 60%;
+      flex-direction: column;
+    }
+    &:nth-child(2) {
+      width: 30%;
+      justify-content: center;
+    }
+    &:last-child {
+      width: 10%;
+      justify-content: flex-end;
+    }
+  }
+  &__last {
+    border-bottom: none;
+    margin-bottom: 0px;
+  }
+  &__title {
+    font-size: 1rem;
+    color: var(--srui-black-color, #000000);
+    font-weight: 700;
+  }
+  &__description {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--srui-black-color, #000000);
+  }
+  &__state {
+    font-size: 1rem;
+    font-weight: 700;
+  }
+  &__image-holder {
+    width: 70px;
+    height: 70px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    img {
+      height: 100%;
+    }
+  }
+}

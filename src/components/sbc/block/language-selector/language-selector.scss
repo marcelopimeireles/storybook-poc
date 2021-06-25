@@ -1,0 +1,168 @@
+* {
+  box-sizing: border-box;
+  transition: all 250ms cubic-bezier(.27,.01,.38,1.06);
+}
+.sr-language-selector {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  margin-bottom: 21px;
+  align-items: center;
+  &__left {
+    justify-content: flex-start;
+    .sr-language-selector__language-selection {
+      .sr-language-selector__tip {
+        left: 14%;
+      }
+    }
+  }
+  &__right {
+    justify-content: flex-end;
+    .sr-language-selector__language-selection {
+      .sr-language-selector__tip {
+        left: 84%;
+      }
+    }
+  }
+  &__current-language-button {
+    font-family: var(--srui-default-font-family, 'AvenirNext');
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 2.5rem;
+    border-radius: 36px;
+    position: relative;
+    padding: 0 35px;
+    color: var(--srui-gray4-color, #545454);
+    font-size: 0.925rem;
+    font-weight: 500;
+    letter-spacing: 1px;
+    line-height: var(--srui-default-line-height);
+    width: 110px;
+    text-transform: uppercase;
+    transition: all 250ms cubic-bezier(.27,.01,.38,1.06);
+    srui-icon {
+      position: relative;
+      top: 2px;
+      margin-right: -5px;
+      transition: all 250ms cubic-bezier(.27,.01,.38,1.06);
+      font-size: 1.8rem;
+      pointer-events: none;
+    }
+    &:hover {
+      filter: brightness(90%);
+    }
+    &:focus {
+      -webkit-appearance: none;
+      outline: none;
+    }
+  }
+  button {
+    -webkit-appearance: none;
+    outline: none;
+    border: none;
+    cursor: pointer;
+  }
+  &__language-selection {
+    position: absolute;
+    transition: all 250ms cubic-bezier(.27,.01,.38,1.06);
+    bottom: 0px;
+    max-height: 0;
+    height: 50px;
+    opacity: 0.7;
+    overflow: hidden;
+    .sr-language-selector__tip {
+      position: absolute;
+      z-index: 1;
+      left: 50%;
+      transform: translateX(calc(-50% + 14px)) rotate(180deg);
+      top: 1px;
+      pointer-events: none;
+      &:before {
+        content: " ";
+        display: block;
+        height: 20px;
+        position: absolute;
+        border-color: var(--srui-gray1-color, #E5E5E5) transparent transparent transparent;
+        border-style: solid;
+        border-width: 11px;
+        top: 1px;
+      }
+
+      &:after {
+        border-left: solid transparent 11px;
+        border-right: solid transparent 11px;
+        border-top: solid #ffffff 11px;
+        content: " ";
+        height: 0;
+        position: absolute;
+        width: 0;
+      }
+    }
+    .sr-language-selector__language-selection-button {
+      position: relative;
+      font-size: 0.925rem;
+      color: var(--srui-gray3-color, #848484);
+      background-color: var(--srui-white-color, #FFFFFF);
+      text-transform: uppercase;
+      padding: 0 25px;
+      height: 100%;
+      transition: all 250ms cubic-bezier(.27,.01,.38,1.06);
+      &.active {
+        font-weight: 700;
+        color: var(--srui-primary-color, #E6003C);
+      }
+      &:after {
+        content: '';
+        height: 60%;
+        border-right: 1px solid var(--srui-gray1-color, #E5E5E5);
+        position: absolute;
+        top: 20%;
+        right: 0;
+      }
+      &:last-child:after {
+        border-right: 0;
+      }
+      &:hover:not(.active) {
+        transition: all 250ms cubic-bezier(.27,.01,.38,1.06);
+        color: var(--srui-gray4-color, #545454);
+        text-shadow:
+            1px 0px 0px var(--srui-gray1-color, #E5E5E5),
+            -1px 0px 0px var(--srui-gray1-color, #E5E5E5),
+            0px -1px 0px var(--srui-gray1-color, #E5E5E5),
+            0px 1px 0px var(--srui-gray1-color, #E5E5E5);
+      }
+    }
+  }
+  &__language-selection-holder {
+    border-radius: 36px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+    background-color: var(--srui-white-color, #FFFFFF);
+    border: 1px solid var(--srui-gray1-color, #E5E5E5);
+  }
+  &__white-background {
+    .sr-language-selector__current-language-button {
+      border: 1px solid var(--srui-gray1-color, #E5E5E5);
+      background-color: var(--srui-white-color, #FFFFFF);
+    }
+  }
+
+  &__open {
+    srui-icon {
+      transform: rotate(180deg);
+      top: 0px;
+    }
+    .sr-language-selector__language-selection {
+      bottom: -65px;
+      height: 50px;
+      max-height: 50px;
+      overflow: initial;
+      opacity: 1;
+    }
+  }
+}
+

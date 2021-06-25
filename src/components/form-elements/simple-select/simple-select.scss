@@ -1,0 +1,38 @@
+* {
+  box-sizing: border-box;
+}
+.sr-simple-select {
+  font-size: 0.875rem;
+  color: var(--srui-form-label-color, #848484);
+  position: relative;
+  opacity: .6;
+  transition: all 250ms cubic-bezier(.27,.01,.38,1.06);
+}
+.sr-simple-select:hover {
+  opacity: 1;
+}
+.sr-simple-select::after {
+  display: inline-block;
+  content: '';
+  border: solid black;
+  border-width: 5px 5px 0 5px;
+  border-color: var(--srui-form-label-color, #848484) transparent transparent transparent;
+  margin-left: -5px;
+  margin-top: -2px;
+  vertical-align: middle;
+}
+:host ::slotted(select::-ms-expand) {
+  display: none;
+}
+:host ::slotted(*)  {
+  outline: none;
+  border: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  font-size: 0.875rem;
+  padding: 0 10px;
+  color: var(--srui-form-label-color, #848484);
+  font-family: var(--srui-default-font-family, 'AvenirNext');
+  font-weight: 500;
+}

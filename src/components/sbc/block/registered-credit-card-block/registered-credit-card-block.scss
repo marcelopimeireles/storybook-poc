@@ -1,0 +1,75 @@
+* {
+  box-sizing: border-box;
+}
+.sr-registered-credit-card-block {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: auto;
+  &__holder {
+    border-radius: var(--srui-content-box-radius, 6px);
+    background-color: var(--srui-white-color, #FFFFFF);
+    box-shadow: var(--srui-default-shadow, 0 2px 4px 0 rgba(0,0,0,0.05));
+    flex-direction: column;
+    transition: max-height 250ms cubic-bezier(.27,.01,.38,1.06);
+  }
+  &__header{
+    border-top-left-radius: var(--srui-content-box-radius, 6px);
+    border-top-right-radius: var(--srui-content-box-radius, 6px);
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px;
+    background: linear-gradient(270deg, #5BCEEE 0%, #41A3E1 39%, #2778D5 68%, #1459CC 100%) 0% 0%;
+    border-bottom: 1px solid var(--srui-alpha-color-active, #EEEEEE);
+    color: var(--srui-white-color, #FFFFFF);
+    max-height: 250px;
+    .sr-registered-credit-card-block__name {
+      font-size: 1.125rem;
+      font-weight: 700;
+      letter-spacing: 0;
+      line-height: var(--srui-default-line-height, 1);
+      margin-bottom: 10px;
+    }
+    .sr-registered-credit-card-block__cc-number {
+      font-size: 0.925rem;
+      margin-bottom: 20px
+    }
+  }
+  &__cc-info {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
+  &__actions {
+    display: flex;
+    padding: 15px;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    ::slotted([slot=button_area]) {
+
+    }
+  }
+  &__status{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    srui-icon{
+      font-size: 32px;
+    }
+    .sr-registered-credit-card-block__status-text {
+      font-size: 0.925rem;
+    }
+  }
+  &__extra-info {
+    color: var(--srui-gray4-color, #545454);
+    font-size: 0.725rem;
+    line-height: 1.2;
+    padding: 10px 5px 0;
+    width: 100%;
+  }
+}

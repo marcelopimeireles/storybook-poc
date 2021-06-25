@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="32px" height="32px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Icon/32/Mobile</title>
+    <g id="Icon/32/Mobile" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Mobile" transform="translate(9.000000, 5.000000)" fill="#ffffff">
+            <path d="M12,0 C13.1045695,0 14,0.8954305 14,2 L14,2 L14,20 C14,21.1045695 13.1045695,22 12,22 L12,22 L2,22 C0.8954305,22 0,21.1045695 0,20 L0,20 L0,2 C0,0.8954305 0.8954305,0 2,0 L2,0 Z M12,2 L9.73181186,2.0010775 C9.38584934,2.59828461 8.7398375,3 8,3 L6,3 C5.2601625,3 4.61415066,2.59828461 4.26818814,2.0010775 L2,2 L2,18 L12,18 L12,2 Z" id="Combined-Shape"></path>
+        </g>
+    </g>
+</svg>

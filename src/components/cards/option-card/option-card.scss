@@ -1,0 +1,46 @@
+* {
+  box-sizing: border-box;
+}
+.sr-option-card {
+  position: relative;
+  display: flex;
+  width: 100%;
+  background-color: var(--srui-white-color, #ffffff);
+  align-items: center;
+  justify-content: space-between;
+  height: 60px;
+  border-bottom: 1px solid var(--srui-alpha-color-active, #EEEEEE);
+}
+.sr-option-card > div {
+  display: flex;
+  align-items: center;
+  position: relative;
+  width: auto;
+}
+::slotted([slot=title]) {
+  width: auto;
+  display: inline-flex;
+  padding-right: 0px;
+}
+.sr-option-card--last {
+  border-bottom: none;
+}
+@media only screen and (max-width: 400px) {
+  .sr-option-card > div {
+    width: auto;
+    max-width: 80%;
+  }
+  ::slotted([slot=title]) {
+    backface-visibility: hidden;
+    display: inline-block;
+    position: relative;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  ::slotted([slot=more_button]) {
+    position: absolute;
+    top: 18px;
+    right: -13px;
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "compilerOptions": {
+    "target": "es2015",
+    "module": "es2015",
+    "watch": false,
+    "moduleResolution": "node",
+    "lib": ["es2017", "dom", "dom.iterable"],
+    "declaration": true,
+    "declarationMap": true,
+    "sourceMap": true,
+    "inlineSources": true,
+    "strict": true,
+    "noUnusedLocals": true,
+    "rootDirs": ["src", "stories"],
+    "noUnusedParameters": true,
+    "noImplicitReturns": true,
+    "noFallthroughCasesInSwitch": true,
+    "noImplicitAny": false,
+    "noImplicitThis": true,
+    "outDir": "./dist",
+    // Only necessary because @types/uglify-js can't find types for source-map
+    "skipLibCheck": true,
+    "experimentalDecorators": true,
+    "composite": true,
+    "importHelpers": true,
+    "strictNullChecks": false,
+    "allowSyntheticDefaultImports": true
+  }, 
+  "include": [
+    "src/**/*.ts",
+    "./mockup-data/*.ts"
+  ],
+  "exclude": [
+    "src/**/*.test.ts"
+  ]
+}

@@ -1,0 +1,96 @@
+* {
+    box-sizing: border-box;
+}
+.sr-navigation {
+    height: 100%;
+    padding: 0;
+    border: none;
+    /*background: radial-gradient(circle farthest-corner at bottom right, rgb(251, 175, 1) 0%, rgb(243, 107, 21) 39.32%, rgb(212, 7, 59) 71.7%, rgb(178, 21, 56) 100%);*/
+}
+.sr-navigation__logo {
+    height: 145px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 10px 10px;
+}
+.sr-navigation__logo img {
+    max-width: 100%;
+}
+.sr-navigation__close {
+    display: block;
+    width: 18px;
+    height: 18px;
+    -webkit-appearance: none;
+    background-color: transparent;
+    border: none;
+    position: absolute;
+    top: 26px;
+    left: 22px;
+    padding: 0;
+    margin: 0;
+    cursor: pointer;
+
+    &:focus {
+        outline: none;
+    }
+}
+.sr-navigation__close span{
+    position: absolute;
+    top: 10px;
+    left: 0;
+    width: 21px;
+    height: 0.094rem;
+    background-color: var(--srui-white-color, #ffffff);
+}
+.sr-navigation__close span:first-child {
+    transform: rotate(-135deg) translateX(2px);
+}
+.sr-navigation__close span:last-child {
+    transform: rotate(-45deg) translateY(-2px);
+}
+.sr-navigation__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    flex-grow: 1;
+}
+.sr-navigation__logo h4 {
+    color: #ffffff;
+    margin: -8px 0 0;
+    font-size: 0.813rem;
+    font-weight: bold;
+    letter-spacing: 0.93px;
+    line-height: 18px;
+    text-transform: uppercase;
+}
+.sr-navigation__list {
+    padding: 0;
+    margin: 0;
+    border: none;
+    display: block;
+}
+.sr-navigation__list li {
+    list-style: none;
+}
+.sr-navigation__footer {
+    width: 100%;
+    position: absolute;
+    bottom: 0px;
+  &:empty {
+    display: none;
+  }
+}
+.sr-navigation__footer slot::slotted(*),
+.sr-navigation__footer.style-scope ::slotted(*) {
+  width: 100%;
+  display: inline-flex;
+  padding: 20px 20px 15px;
+}
+@media only screen and (min-width: 1024px) {
+    .sr-navigation__close {
+        display: none;
+    }
+}

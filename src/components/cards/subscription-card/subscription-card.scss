@@ -1,0 +1,81 @@
+* {
+  box-sizing: border-box;
+  transition: all 250ms cubic-bezier(.27,.01,.38,1.06);
+}
+.sr-subscription-card {
+  position: relative;
+  display: flex;
+  width: 100%;
+  background-color: var(--srui-white-color, #ffffff);
+  align-items: center;
+  justify-content: space-between;
+  min-height: 45px;
+  padding: 8px 0;
+  border-bottom: 1px solid var(--srui-alpha-color-active, #EEEEEE);
+}
+.sr-subscription-card--last {
+  border-bottom: none;
+}
+.sr-subscription-card__content {
+  display: flex;
+  flex-direction: row;
+  //align-items: center;
+  width: 100%;
+}
+.sr-subscription-card__label-holder {
+  //width: 180px;
+  width: 35%;
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: 0;
+  color: var(--srui-black-color, #000000);
+  line-height: var(--srui-default-line-height, 1);
+  display: block;
+  padding: 7px 0;
+}
+.sr-subscription-card__title-holder{
+  font-weight: 500;
+  font-size: 1rem;
+  letter-spacing: 0;
+  color: var(--srui-gray4-color, #545454);
+  line-height: var(--srui-default-line-height, 1);
+  margin: 7px 0;
+  display: block;
+}
+.sr-subscription-card__info-holder{
+  width: 65%;
+  font-weight: 500;
+  font-size: 0.813rem;
+  letter-spacing: 0;
+  color: var(--srui-gray2-color, #ADADAD);
+  line-height: var(--srui-default-line-height, 1);
+  margin: 7px 0;
+  //display: block;
+}
+.sr-subscription-card__state-label {
+  display: none;
+  color: var(--srui-valid-color, #00D9A2);
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: 0;
+  line-height: var(--srui-default-line-height, 1);
+}
+.sr-subscription-card__state-label:before{
+  content: '';
+  background-color: var(--srui-valid-color, #00D9A2);
+}
+//.sr-subscription-card--state .sr-subscription-card__info{
+//  display: none;
+//}
+.sr-subscription-card--state .sr-subscription-card__state-label{
+  display: inline-block;
+}
+@media only screen and (max-width: 1023px) {
+  .sr-subscription-card__content {
+    flex-flow: column;
+    align-items: flex-start;
+  }
+  .sr-subscription-card__label-holder{
+    margin-bottom: 5px;
+  }
+}

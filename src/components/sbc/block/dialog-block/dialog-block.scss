@@ -1,0 +1,93 @@
+* {
+  box-sizing: border-box;
+}
+.sr-dialog-block {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0,0,0,0.4);
+  z-index: var(--srui-zindex-modal, 200);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-items: center;
+  &__holder {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-items: center;
+    width: 100%;
+    max-width: 640px;
+    margin: auto;
+    border-radius: 8px;
+    background-color: var(--srui-white-color, #FFFFFF);
+    padding: 40px 30px;
+    align-items: center;
+    box-shadow: 0 2px 16px 0 rgba(135,131,128,0.21);
+    font-family: var(--srui-default-font-family, 'AvenirNext');
+    transition: all 250ms cubic-bezier(.27,.01,.38,1.06);
+  }
+  &__icon {
+    margin-top: -9px;
+    margin-bottom: 8px;
+  }
+  &__title {
+    font-size: 1.125rem;
+    text-align: center;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 25px;
+  }
+  &__description {
+    margin-bottom: 25px;
+    font-size: 0.975rem;
+    &:empty {
+      display: none;
+    }
+  }
+  &__actions{
+    width: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-items: center;
+  }
+  ::slotted([slot=cancel_button]){
+    margin-bottom: 15px;
+    &:empty {
+      display: none;
+    }
+  }
+  ::slotted([slot=action_button]){
+    &:empty {
+      display: none;
+    }
+  }
+  &__row-buttons{
+    .sr-dialog-block__actions{
+      flex-direction: row;
+      justify-content: space-between;
+    }
+    ::slotted([slot=cancel_button]){
+      margin: 0;
+    }
+  }
+  &__full-width-buttons {
+    .sr-dialog-block__actions > div{
+      width: 100%;
+    }
+    ::slotted([slot=cancel_button]){
+      width: 100% !important;
+    }
+    ::slotted([slot=action_button]){
+      width: 100%;
+    }
+  }
+}
+

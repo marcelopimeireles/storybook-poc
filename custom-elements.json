@@ -1,0 +1,5713 @@
+{
+  "version": "experimental",
+  "tags": [
+    {
+      "name": "srui-content-dropdown",
+      "path": "./src\\components\\buttons\\content-dropdown\\content-dropdown.ts",
+      "description": "This component generates a button that can switch on and off a dropdown overlay with flexible content.\r\nThe width of the overlay can be set, as well as a content max height that enables inner content scrolling.\r\nHeader and footer slots are provided.",
+      "attributes": [
+        {
+          "name": "disabled",
+          "description": "Disable component",
+          "type": "boolean",
+          "default": "false"
+        },
+        {
+          "name": "active",
+          "description": "State of the dropdown (true = open)",
+          "type": "boolean",
+          "default": "false"
+        },
+        {
+          "name": "icon",
+          "description": "Font Icon name for the dropdown toggle button",
+          "type": "string",
+          "default": "\"\""
+        },
+        {
+          "name": "iconSrc",
+          "description": "Icon image location (src) - ignored if a font icon is set",
+          "type": "string",
+          "default": "\"\""
+        },
+        {
+          "name": "label",
+          "description": "Label for the dropdown toggle button",
+          "type": "string",
+          "default": "\"\""
+        },
+        {
+          "name": "subLabel",
+          "description": "Sub-label for the dropdown toggle button",
+          "type": "string",
+          "default": "\"\""
+        },
+        {
+          "name": "overlayWidth",
+          "description": "Static width of the dropdown overlay",
+          "type": "number",
+          "default": "300"
+        },
+        {
+          "name": "contentMaxHeight",
+          "description": "Max height of the dropdown overlay content (excluding header and footer slots).\r\nIf content exceeds this height, the content will scroll",
+          "type": "number",
+          "default": "300"
+        },
+        {
+          "name": "hideLabelMobile",
+          "description": "Hide toggle label for mobile",
+          "type": "boolean",
+          "default": "false"
+        },
+        {
+          "name": "noContent",
+          "description": "No Content (completely removes content)",
+          "type": "boolean",
+          "default": "false"
+        },
+        {
+          "name": "labelMaxWidth",
+          "description": "If true will set main label (srui-icon-button) with a max with",
+          "type": "boolean",
+          "default": "false"
+        }
+      ],
+      "properties": [
+        {
+          "name": "disabled",
+          "attribute": "disabled",
+          "description": "Disable component",
+          "type": "boolean",
+          "default": "false"
+        },
+        {
+          "name": "active",
+          "attribute": "active",
+          "description": "State of the dropdown (true = open)",
+          "type": "boolean",
+          "default": "false"
+        },
+        {
+          "name": "icon",
+          "attribute": "icon",
+          "description": "Font Icon name for the dropdown toggle button",
+          "type": "string",
+          "default": "\"\""
+        },
+        {
+          "name": "iconSrc",
+          "attribute": "iconSrc",
+          "description": "Icon image location (src) - ignored if a font icon is set",
+          "type": "string",
+          "default": "\"\""
+        },
+        {
+          "name": "label",
+          "attribute": "label",
+          "description": "Label for the dropdown toggle button",
+          "type": "string",
+          "default": "\"\""
+        },
+        {
+          "name": "subLabel",
+          "attribute": "subLabel",
+          "description": "Sub-label for the dropdown toggle button",
+          "type": "string",
+          "default": "\"\""
+        },
+        {
+          "name": "overlayWidth",
+          "attribute": "overlayWidth",
+          "description": "Static width of the dropdown overlay",
+          "type": "number",
+          "default": "300"
+        },
+        {
+          "name": "contentMaxHeight",
+          "attribute": "contentMaxHeight",
+          "description": "Max height of the dropdown overlay content (excluding header and footer slots).\r\nIf content exceeds this height, the content will scroll",
+          "type": "number",
+          "default": "300"
+        },
+        {
+          "name": "hideLabelMobile",
+          "attribute": "hideLabelMobile",
+          "description": "Hide toggle label for mobile",
+          "type": "boolean",
+          "default": "false"
+        },
+        {
+          "name": "noContent",
+          "attribute": "noContent",
+          "description": "No Content (completely removes content)",
+          "type": "boolean",
+          "default": "false"
+        },
+        {
+          "name": "labelMaxWidth",
+          "attribute": "labelMaxWidth",
+          "description": "If true will set main label (srui-icon-button) with a max with",
+          "type": "boolean",
+          "default": "false"
+        }
+      ],
+      "events": [
+        {
+          "name": "srui-toggle",
+          "description": "Dropdown toggle event - details: target active state"
+        }
+      ],
+      "slots": [
+        {
+          "name": "header",
+          "description": "Dropdown overlay header"
+        },
+        {
+          "name": "content",
+          "description": "Dropdown overlay content"
+        },
+        {
+          "name": "footer",
+          "description": "Dropdown overlay footer"
+        },
+        {
+          "name": "custom-header-label",
+          "description": "Dropdown Custom label (tooltip possibility)"
+        }
+      ]
+    },
+    {
+      "name": "srui-icon-button",
+      "path": "./src\\components\\buttons\\icon-button\\icon-button.ts",
+      "description": "Simple Button component with an icon before the label",
+      "attributes": [
+        {
+          "name": "disabled",
+          "description": "Disables button",
+          "type": "boolean",
+          "default": "false"
+        },
+        {
+          "name": "icon",
+          "description": "Icon name (for font icons)",
+          "type": "string",
+          "default": "\"\""
+        },
+        {
+          "name": "iconSrc",
+          "description": "Icon src (for image icons)",
+          "type": "string",
+          "default": "\"\""
+        },
+        {
+          "name": "iconOnly",
+          "description": "Removes margin if there is no label",
+          "type": "boolean",
+          "default": "false"
+        },
+        {
+          "name": "subLabel",
+          "description": "Sub-label for the button",
+          "type": "string",
+          "default": "\"\""
+        },
+        {
+          "name": "hoverHighlight",
+          "description": "If true, on hover bg becomes light grey. Used in dropdown menus.",
+          "type": "boolean",
+          "default": "false"
+        },
+        {
+          "name": "lightText",
+          "description": "If true, font will be normal instead of bold",
+          "type": "boolean",
+          "default": "false"
+        },
+        {
+          "name": "updates",
+          "description": "If true, marks the icon with a red overlay disc",
+          "type": "boolean",
+          "default": "false"
+        },
+        {
+          "name": "active",
+          "description": "Button active state - Click not triggered",
+          "type": "boolean",
+          "default": "false"
+        },
+        {
+          "name": "hideLabelMobile",
+          "description": "Removes the label in mobile (only icon shows)",
+          "type": "boolean",
+          "default": "false"
+        },
+        {
+          "name": "buttonType",
+          "description": "Button style ['normal', 'small-link']",
+          "type": "string",
+          "default": "\"normal\""
+        },
+        {
+          "name": "buttonColor",
+          "description": "Button color",
+          "type": "string",
+          "default": "\"black\""
+        },
+        {
+          "name": "maxWith",
+          "description": "if true will set label max with to 250px",
+          "type": "boolean",
+          "default": "false"
+        }
+      ],
+      "properties": [
+        {
+          "name": "disabled",
+          "attribute": "disabled",
+          "description": "Disables button",
+          "type": "boolean",
+          "default": "false"
+        },
+        {
+          "name": "icon",
+          "attribute": "icon",
+          "description": "Icon name (for font icons)",
+          "type": "string",
+          "default": "\"\""
+        },
+        {
+          "name": "iconSrc",
+          "attribute": "iconSrc",
+          "description": "Icon src (for image icons)",
+          "type": "string",
+          "default": "\"\""
+        },
+        {
+          "name": "iconOnly",
+          "attribute": "iconOnly",
+          "description": "Removes margin if there is no label",
+          "type": "boolean",
+          "default": "false"
+        },
+        {
+          "name": "subLabel",
+          "attribute": "subLabel",
+          "description": "Sub-label for the button",
+          "type": "string",
+          "default": "\"\""
+        },
+        {
+          "name": "hoverHighlight",
+          "attribute": "hoverHighlight",
+          "description": "If true, on hover bg becomes light grey. Used in dropdown menus.",
+          "type": "boolean",
+          "default": "false"
+        },
+        {
+          "name": "lightText",
+          "attribute": "lightText",
+          "description": "If true, font will be normal instead of bold",
+          "type": "boolean",
+          "default": "false"
+        },
+        {
+          "name": "updates",
+          "attribute": "updates",
+          "description": "If true, marks the icon with a red overlay disc",
+          "type": "boolean",
+          "default": "false"
+        },
+        {
+          "name": "active",
+          "attribute": "active",
+          "description": "Button active state - Click not triggered",
+          "type": "boolean",
+          "default": "false"
+        },
+        {
+          "name": "hideLabelMobile",
+          "attribute": "hideLabelMobile",
+          "description": "Removes the label in mobile (only icon shows)",
+          "type": "boolean",
+          "default": "false"
+        },
+        {
+          "name": "buttonType",
+          "attribute": "buttonType",
+          "description": "Button style ['normal', 'small-link']",
+          "type": "string",
+          "default": "\"normal\""
+        },
+        {
+          "name": "buttonColor",
+          "attribute": "buttonColor",
+          "description": "Button color",
+          "type": "string",
+          "default": "\"black\""
+        },
+        {
+          "name": "maxWith",
+          "attribute": "maxWith",
+          "description": "if true will set label max with to 250px",
+          "type": "boolean",
+          "default": "false"
+        }
+      ],
+      "slots": [
+        {
+          "name": "default",
+          "description": "Button label"
+        },
+        {
+          "name": "custom-label",
+          "description": "Custom label"
+        }
+      ]
+    },
+    {
+      "name": "srui-link",
+      "path": "./src\\components\\buttons\\link\\link.ts",
+      "description": "Link component with an icon before the label",
+      "attributes": [
+        {
+          "name": "disabled",
+          "description": "Disables link",
+          "type": "boolean",
+          "default": "false"
+        },
+        {
+          "name": "icon",
+          "description": "Icon name (for font icons)",
+          "type": "string",
+          "default": "\"\""
+        },
+        {
+          "name": "active",
+          "description": "If true, the link is with active state",
+          "type": "boolean",
+          "default": "false"
+        },
+        {
+          "name": "iconSrc",
+          "description": "Icon src (for image icons)",
+          "type": "string",
+          "default": "\"\""
+        },
+        {
+          "name": "linkSize",
+          "description": "Link size ['normal', 'small', 'tiny', 'inherit']",
+          "type": "string",
+          "default": "\"normal\""
+        },
+        {
+          "name": "iconSize",
+          "description": "Icon size ['normal', 'small', 'tiny', 'inherit']",
+          "type": "string",
+          "default": "\"small\""
+        },
+        {
+          "name": "color",
+          "description": "Link color ['primary', 'gray', 'light-gray', 'black']",
+          "type": "string",
+          "default": "\"primary\""
+        },
+        {
+          "name": "underline",
+          "description": "If true, adds underline on link",
+          "type": "boolean",
+          "default": "false"
+        },
+        {
+          "name": "href",
+          "description": "Href - Url ore relative path if to be used as a direct link",
+          "type": "string",
+          "default": "\"javascript: void(0)\""
+        },
+        {
+          "name": "counter",
+          "description": "Link updated counter (if > 0 shows counter number)\r\nif has couter cant be external",
+          "type": "number",
+          "default": "0"
+        },
+        {
+          "name": "external",
+          "description": "If true, adds external icon\r\ncant have counters if is external link",
+          "type": "boolean",
+          "default": "false"
+        },
+        {
+          "name": "newTab",
+          "description": "Open target in new tab / window\r\n(sets target=\"_blank\")",
+          "type": "boolean",
+          "default": "false"
+        },
+        {
+          "name": "lightText",
+          "description": "If true, font will be normal instead of bold",
+          "type": "boolean",
+          "default": "false"
+        }
+      ],
+      "properties": [
+        {
+          "name": "disabled",
+          "attribute": "disabled",
+          "description": "Disables link",
+          "type": "boolean",
+          "default": "false"
+        },
+        {
+          "name": "icon",
+          "attribute": "icon",
+          "description": "Icon name (for font icons)",
+          "type": "string",
+          "default": "\"\""
+        },
+        {
+          "name": "active",
+          "attribute": "active",
+          "description": "If true, the link is with active state",
+          "type": "boolean",
+          "default": "false"
+        },
+        {
+          "name": "iconSrc",
+          "attribute": "iconSrc",
+          "description": "Icon src (for image icons)",
+          "type": "string",
+          "default": "\"\""
+        },
+        {
+          "name": "linkSize",
+          "attribute": "linkSize",
+          "description": "Link size ['normal', 'small', 'tiny', 'inherit']",
+          "type": "string",
+          "default": "\"normal\""
+        },
+        {
+          "name": "iconSize",
+          "attribute": "iconSize",
+          "description": "Icon size ['normal', 'small', 'tiny', 'inherit']",
+          "type": "string",
+          "default": "\"small\""
+        },
+        {
+          "name": "color",
+          "attribute": "color",
+          "description": "Link color ['primary', 'gray', 'light-gray', 'black']",
+          "type": "string",
+          "default": "\"primary\""
+        },
+        {
+          "name": "underline",
+          "attribute": "underline",
+          "description": "If true, adds underline on link",
+          "type": "boolean",
+          "default": "false"
+        },
+        {
+          "name": "href",
+          "attribute": "href",
+          "description": "Href - Url ore relative path if to be used as a direct link",
+          "type": "string",
+          "default": "\"javascript: void(0)\""
+        },
+        {
+          "name": "counter",
+          "attribute": "counter",
+          "description": "Link updated counter (if > 0 shows counter number)\r\nif has couter cant be external",
+          "type": "number",
+          "default": "0"
+        },
+        {
+          "name": "external",
+          "attribute": "external",
+          "description": "If true, adds external icon\r\ncant have counters if is external link",
+          "type": "boolean",
+          "default": "false"
+        },
+        {
+          "name": "newTab",
+          "attribute": "newTab",
+          "description": "Open target in new tab / window\r\n(sets target=\"_blank\")",
+          "type": "boolean",
+          "default": "false"
+        },
+        {
+          "name": "lightText",
+          "attribute": "lightText",
+          "description": "If true, font will be normal instead of bold",
+          "type": "boolean",
+          "default": "false"
+        }
+      ],
+      "slots": [
+        {
+          "name": "default",
+          "description": "Link label"
+        }
+      ]
+    },
+    {
+      "name": "srui-list-button",
+      "path": "./src\\components\\buttons\\list-button\\list-button.ts",
+      "description": "List Button component with an icon",
+      "attributes": [
+        {
+          "name": "disabled",
+          "description": "Disables button",
+          "type": "boolean",
+          "default": "false"
+        },
+        {
+          "name": "icon",
+          "description": "Icon name (for font icons)",
+          "type": "string",
+          "default": "\"\""
+        },
+        {
+          "name": "iconSrc",
+          "description": "Icon src (for image icons)",
+          "type": "string",
+          "default": "\"\""
+        }
+      ],
+      "properties": [
+        {
+          "name": "disabled",
+          "attribute": "disabled",
+          "description": "Disables button",
+          "type": "boolean",
+          "default": "false"
+        },
+        {
+          "name": "icon",
+          "attribute": "icon",
+          "description": "Icon name (for font icons)",
+          "type": "string",
+          "default": "\"\""
+        },
+        {
+          "name": "iconSrc",
+          "attribute": "iconSrc",
+          "description": "Icon src (for image icons)",
+          "type": "string",
+          "default": "\"\""
+        }
+      ],
+      "slots": [
+        {
+          "name": "titlte",
+          "description": "List button title"
+        },
+        {
+          "name": "sub-title",
+          "description": "List button sub-title"
+        }
+      ]
+    },
+    {
+      "name": "srui-more-button",
+      "path": "./src\\components\\buttons\\more-button\\more-button.ts",
+      "description": "3 dots Button (or other icon set by attribute) that opens a dropdown to show options",
+      "attributes": [
+        {
+          "name": "disabled",
+          "description": "Disables button",
+          "type": "boolean",
+          "default": "false"
+        },
+        {
+          "name": "active",
+          "description": "Shows dropdown",
+          "type": "boolean",
+          "default": "false"
+        },
+        {
+          "name": "icon",
+          "description": "Icon name (for font icons)",
+          "type": "string",
+          "default": "\"dots-more\""
+        },
+        {
+          "name": "iconSrc",
+          "description": "Icon src (for image icons)",
+          "type": "string",
+          "default": "\"\""
+        }
+      ],
+      "properties": [
+        {
+          "name": "disabled",
+          "attribute": "disabled",
+          "description": "Disables button",
+          "type": "boolean",
+          "default": "false"
+        },
+        {
+          "name": "active",
+          "attribute": "active",
+          "description": "Shows dropdown",
+          "type": "boolean",
+          "default": "false"
+        },
+        {
+          "name": "icon",
+          "attribute": "icon",
+          "description": "Icon name (for font icons)",
+          "type": "string",
+          "default": "\"dots-more\""
+        },
+        {
+          "name": "iconSrc",
+          "attribute": "iconSrc",
+          "description": "Icon src (for image icons)",
+          "type": "string",
+          "default": "\"\""
+        }
+      ],
+      "slots": [
+        {
+          "name": "content",
+          "description": "dropdown box content"
+        }
+      ]
+    },
+    {
+      "name": "srui-nav-button",
+      "path": "./src\\components\\buttons\\nav-button\\nav-button.ts",
+      "description": "Button for the sidebar navigation",
+      "attributes": [
+        {
+          "name": "disabled",
+          "description": "Diable button (click not possible)",
+          "type": "boolean",
+          "default": "false"
+        },
+        {
+          "name": "state",
+          "description": "Button state\r\n['default', 'active']",
+          "type": "string",
+          "default": "\"default\""
+        },
+        {
+          "name": "icon",
+          "description": "Icon name (for font icons)",
+          "type": "string",
+          "default": "\"\""
+        },
+        {
+          "name": "iconSrc",
+          "description": "Icon src (for image icons)",
+          "type": "string",
+          "default": "\"\""
+        },
+        {
+          "name": "counter",
+          "description": "Counter number - if 0 counter doesn't show",
+          "type": "number",
+          "default": "0"
+        }
+      ],
+      "properties": [
+        {
+          "name": "disabled",
+          "attribute": "disabled",
+          "description": "Diable button (click not possible)",
+          "type": "boolean",
+          "default": "false"
+        },
+        {
+          "name": "state",
+          "attribute": "state",
+          "description": "Button state\r\n['default', 'active']",
+          "type": "string",
+          "default": "\"default\""
+        },
+        {
+          "name": "icon",
+          "attribute": "icon",
+          "description": "Icon name (for font icons)",
+          "type": "string",
+          "default": "\"\""
+        },
+        {
+          "name": "iconSrc",
+          "attribute": "iconSrc",
+          "description": "Icon src (for image icons)",
+          "type": "string",
+          "default": "\"\""
+        },
+        {
+          "name": "counter",
+          "attribute": "counter",
+          "description": "Counter number - if 0 counter doesn't show",
+          "type": "number",
+          "default": "0"
+        }
+      ],
+      "slots": [
+        {
+          "name": "default",
+          "description": "Label for the button"
+        }
+      ]
+    },
+    {
+      "name": "srui-site-selector-button",
+      "path": "./src\\components\\buttons\\site-selector-button\\site-selector-button.ts",
+      "description": "Selector button for company (site) selection and settings",
+      "attributes": [
+        {
+          "name": "disabled",
+          "description": "Disable Button",
+          "type": "boolean",
+          "default": "false"
+        },
+        {
+          "name": "active",
+          "description": "Button selected state",
+          "type": "boolean",
+          "default": "false"
+        },
+        {
+          "name": "icon",
+          "description": "Icon name (for font icons)",
+          "type": "string",
+          "default": "\"\""
+        },
+        {
+          "name": "iconSrc",
+          "description": "Icon src (for image icons)",
+          "type": "string",
+          "default": "\"\""
+        }
+      ],
+      "properties": [
+        {
+          "name": "disabled",
+          "attribute": "disabled",
+          "description": "Disable Button",
+          "type": "boolean",
+          "default": "false"
+        },
+        {
+          "name": "active",
+          "attribute": "active",
+          "description": "Button selected state",
+          "type": "boolean",
+          "default": "false"
+        },
+        {
+          "name": "icon",
+          "attribute": "icon",
+          "description": "Icon name (for font icons)",
+          "type": "string",
+          "default": "\"\""
+        },
+        {
+          "name": "iconSrc",
+          "attribute": "iconSrc",
+          "description": "Icon src (for image icons)",
+          "type": "string",
+          "default": "\"\""
+        }
+      ],
+      "events": [
+        {
+          "name": "srui-settings-click",
+          "description": "Settings button clicked"
+        }
+      ],
+      "slots": [
+        {
+          "name": "site",
+          "description": "Title, eg: Company / Site name"
+        },
+        {
+          "name": "code",
+          "description": "Subtitle, eg: code or extra info"
+        }
+      ]
+    },
+    {
+      "name": "srui-std-button",
+      "path": "./src\\components\\buttons\\std-button\\std-button.ts",
+      "description": "Standard Button",
+      "attributes": [
+        {
+          "name": "disabled",
+          "description": "Disables button",
+          "type": "boolean",
+          "default": "false"
+        },
+        {
+          "name": "color",
+          "description": "Button background color - Should be one of the CSS var defined colors:\r\n[primary-color, primary-color-dark, secondary-color, secondary-color-light,\r\npromo-color, valid-color, invalid-color, dark-color, grey-color, white-color, alpha-color]",
+          "type": "string",
+          "default": "\"primary-color\""
+        },
+        {
+          "name": "size",
+          "description": "Button size\r\n[tiny, small, default, large]",
+          "type": "string",
+          "default": "\"default\""
+        },
+        {
+          "name": "icon",
+          "description": "Icon name (for font icons)",
+          "type": "string",
+          "default": "\"\""
+        },
+        {
+          "name": "iconSrc",
+          "description": "Icon src (for image icons)",
+          "type": "string",
+          "default": "\"\""
+        },
+        {
+          "name": "iconColor",
+          "description": "Color for the font icons and label\r\n[primary-color, primary-color-dark, secondary-color, secondary-color-light,\r\npromo-color, valid-color, invalid-color, dark-color, grey-color, white-color, alpha-color]",
+          "type": "string",
+          "default": "\"white-color\""
+        },
+        {
+          "name": "iconSize",
+          "description": "Icon size\r\n[tiny, small, medium, large, inherit (just for font icons - will inherit ancestor font size)]",
+          "type": "string",
+          "default": "\"small\""
+        },
+        {
+          "name": "rounded",
+          "description": "Round button (no text, just icon)",
+          "type": "boolean",
+          "default": "false"
+        },
+        {
+          "name": "lighterHover",
+          "description": "Hover effect is a brighter color instead of darker",
+          "type": "boolean",
+          "default": "false"
+        },
+        {
+          "name": "loading",
+          "description": "Loading state - if present shows the load animation icon",
+          "type": "boolean",
+          "default": "false"
+        },
+        {
+          "name": "loadingSolo",
+          "description": "If true, when loading removes text and icon and only the loader animation shows in the button",
+          "type": "boolean",
+          "default": "false"
+        },
+        {
+          "name": "type",
+          "description": "HTML button type (if submit event is triggered from hidden button outside the shadow dom)",
+          "type": "string",
+          "default": "\"button\""
+        },
+        {
+          "name": "disableEvent",
+          "description": "If true, when loading removes text and icon and only the loader animation shows in the button",
+          "type": "boolean",
+          "default": "false"
+        },
+        {
+          "name": "fontWeight",
+          "description": "If true, the button text will",
+          "type": "string",
+          "default": "\"700\""
+        }
+      ],
+      "properties": [
+        {
+          "name": "disabled",
+          "attribute": "disabled",
+          "description": "Disables button",
+          "type": "boolean",
+          "default": "false"
+        },
+        {
+          "name": "color",
+          "attribute": "color",
+          "description": "Button background color - Should be one of the CSS var defined colors:\r\n[primary-color, primary-color-dark, secondary-color, secondary-color-light,\r\npromo-color, valid-color, invalid-color, dark-color, grey-color, white-color, alpha-color]",
+          "type": "string",
+          "default": "\"primary-color\""
+        },
+        {
+          "name": "size",
+          "attribute": "size",
+          "description": "Button size\r\n[tiny, small, default, large]",
+          "type": "string",
+          "default": "\"default\""
+        },
+        {
+          "name": "icon",
+          "attribute": "icon",
+          "description": "Icon name (for font icons)",
+          "type": "string",
+          "default": "\"\""
+        },
+        {
+          "name": "iconSrc",
+          "attribute": "iconSrc",
+          "description": "Icon src (for image icons)",
+          "type": "string",
+          "default": "\"\""
+        },
+        {
+          "name": "iconColor",
+          "attribute": "iconColor",
+          "description": "Color for the font icons and label\r\n[primary-color, primary-color-dark, secondary-color, secondary-color-light,\r\npromo-color, valid-color, invalid-color, dark-color, grey-color, white-color, alpha-color]",
+          "type": "string",
+          "default": "\"white-color\""
+        },
+        {
+          "name": "iconSize",
+          "attribute": "iconSize",
+          "description": "Icon size\r\n[tiny, small, medium, large, inherit (just for font icons - will inherit ancestor font size)]",
+          "type": "string",
+          "default": "\"small\""
+        },
+        {
+          "name": "rounded",
+          "attribute": "rounded",
+          "description": "Round button (no text, just icon)",
+          "type": "boolean",
+          "default": "false"
+        },
+        {
+          "name": "lighterHover",
+          "attribute": "lighterHover",
+          "description": "Hover effect is a brighter color instead of darker",
+          "type": "boolean",
+          "default": "false"
+        },
+        {
+          "name": "loading",
+          "attribute": "loading",
+          "description": "Loading state - if present shows the load animation icon",
+          "type": "boolean",
+          "default": "false"
+        },
+        {
+          "name": "loadingSolo",
+          "attribute": "loadingSolo",
+          "description": "If true, when loading removes text and icon and only the loader animation shows in the button",
+          "type": "boolean",
+          "default": "false"
+        },
+        {
+          "name": "type",
+          "attribute": "type",
+          "description": "HTML button type (if submit event is triggered from hidden button outside the shadow dom)",
+          "type": "string",
+          "default": "\"button\""
+        },
+        {
+          "name": "disableEvent",
+          "attribute": "disableEvent",
+          "description": "If true, when loading removes text and icon and only the loader animation shows in the button",
+          "type": "boolean",
+          "default": "false"
+        },
+        {
+          "name": "fontWeight",
+          "attribute": "fontWeight",
+          "description": "If true, the button text will",
+          "type": "string",
+          "default": "\"700\""
+        },
+        {
+          "name": "submitHandler",
+          "type": "(evt: Event) => void",
+          "default": "\"(evt: Event): void => {\\r\\n    /**\\r\\n     * Event triggered when button is type submit\\r\\n     * Event detail.event retrieves the event and detail.target the event.target of the element clicked\\r\\n     * @event srui-submit-event\\r\\n     */\\r\\n    this.dispatchEvent(new CustomEvent('srui-submit-event', {\\r\\n      composed: true,\\r\\n      bubbles: true,\\r\\n      detail: {\\r\\n        event: evt,\\r\\n        target: evt.target\\r\\n      }\\r\\n    }));\\r\\n  }\""
+        }
+      ],
+      "events": [
+        {
+          "name": "srui-submit-event",
+          "description": "Event triggered when button is type submit\r\nEvent detail.event retrieves the event and detail.target the event.target of the element clicked"
+        }
+      ],
+      "slots": [
+        {
+          "name": "default",
+          "description": "Button Label"
+        }
+      ]
+    },
+    {
+      "name": "srui-account-access-card",
+      "path": "./src\\components\\cards\\account-access-card\\account-access-card.ts",
+      "description": "Account access card with an Icon, Title, Sub title",
+      "attributes": [
+        {
+          "name": "title",
+          "description": "Title",
+          "type": "string",
+          "default": "\"\""
+        },
+        {
+          "name": "subTitle",
+          "description": "Sub title",
+          "type": "string",
+          "default": "\"\""
+        },
+        {
+          "name": "icon",
+          "description": "Icon name (for font icons)",
+          "type": "string",
+          "default": "\"\""
+        },
+        {
+          "name": "iconSrc",
+          "description": "Icon src (for image icons)",
+          "type": "string",
+          "default": "\"\""
+        },
+        {
+          "name": "last",
+          "description": "Removes bottom separator",
+          "type": "boolean",
+          "default": "false"
+        },
+        {
+          "name": "fullWith",
+          "description": "if true set the content full width",
+          "type": "boolean",
+          "default": "false"
+        }
+      ],
+      "properties": [
+        {
+          "name": "title",
+          "attribute": "title",
+          "description": "Title",
+          "type": "string",
+          "default": "\"\""
+        },
+        {
+          "name": "subTitle",
+          "attribute": "subTitle",
+          "description": "Sub title",
+          "type": "string",
+          "default": "\"\""
+        },
+        {
+          "name": "icon",
+          "attribute": "icon",
+          "description": "Icon name (for font icons)",
+          "type": "string",
+          "default": "\"\""
+        },
+        {
+          "name": "iconSrc",
+          "attribute": "iconSrc",
+          "description": "Icon src (for image icons)",
+          "type": "string",
+          "default": "\"\""
+        },
+        {
+          "name": "last",
+          "attribute": "last",
+          "description": "Removes bottom separator",
+          "type": "boolean",
+          "default": "false"
+        },
+        {
+          "name": "fullWith",
+          "attribute": "fullWith",
+          "description": "if true set the content full width",
+          "type": "boolean",
+          "default": "false"
+        }
+      ]
+    },
+    {
+      "name": "srui-account-card",
+      "path": "./src\\components\\cards\\account-card\\account-card.ts",
+      "description": "Account card with an Icon, Title, Sub title, location, sub accounts",
+      "attributes": [
+        {
+          "name": "title",
+          "description": "Title",
+          "type": "string",
+          "default": "\"\""
+        },
+        {
+          "name": "subTitle",
+          "description": "Sub title",
+          "type": "string",
+          "default": "\"\""
+        },
+        {
+          "name": "location",
+          "description": "Location",
+          "type": "string",
+          "default": "\"\""
+        },
+        {
+          "name": "subAccounts",
+          "description": "Number of sub accounts only visible on main account card",
+          "type": "number",
+          "default": "0"
+        },
+        {
+          "name": "mainAccount",
+          "description": "if true, is an Main account else is an sub account card",
+          "type": "boolean"
+        },
+        {
+          "name": "subAccountActive",
+          "description": "if true, the sub account is active",
+          "type": "boolean",
+          "default": "false"
+        },
+        {
+          "name": "subAccountButton",
+          "description": "if true, SubAccount button will be visible",
+          "type": "boolean"
+        },
+        {
+          "name": "subAccountLabel",
+          "description": "* * SubAccount label",
+          "type": "string",
+          "default": "\"\""
+        },
+        {
+          "name": "hideMainIcon",
+          "description": "if true, the location icon will be hidden",
+          "type": "boolean",
+          "default": "false"
+        },
+        {
+          "name": "hideLocationIcon",
+          "description": "if true, the main(1st) icon will be hidden",
+          "type": "boolean",
+          "default": "false"
+        },
+        {
+          "name": "extraIconSlot",
+          "description": "if true, the main(1st) icon will be hidden",
+          "type": "boolean",
+          "default": "false"
+        },
+        {
+          "name": "hideHolderActions",
+          "description": "if true, will hide \"more\" button",
+          "type": "boolean",
+          "default": "false"
+        },
+        {
+          "name": "hideArrowIcon",
+          "description": "if true, will hide the right arrow icon",
+          "type": "boolean",
+          "default": "false"
+        },
+        {
+          "name": "hideSubButtonIcon",
+          "description": "if true, will hide the sub-account-button icons",
+          "type": "boolean",
+          "default": "false"
+        }
+      ],
+      "properties": [
+        {
+          "name": "title",
+          "attribute": "title",
+          "description": "Title",
+          "type": "string",
+          "default": "\"\""
+        },
+        {
+          "name": "subTitle",
+          "attribute": "subTitle",
+          "description": "Sub title",
+          "type": "string",
+          "default": "\"\""
+        },
+        {
+          "name": "location",
+          "attribute": "location",
+          "description": "Location",
+          "type": "string",
+          "default": "\"\""
+        },
+        {
+          "name": "subAccounts",
+          "attribute": "subAccounts",
+          "description": "Number of sub accounts only visible on main account card",
+          "type": "number",
+          "default": "0"
+        },
+        {
+          "name": "mainAccount",
+          "attribute": "mainAccount",
+          "description": "if true, is an Main account else is an sub account card",
+          "type": "boolean"
+        },
+        {
+          "name": "subAccountActive",
+          "attribute": "subAccountActive",
+          "description": "if true, the sub account is active",
+          "type": "boolean",
+          "default": "false"
+        },
+        {
+          "name": "subAccountButton",
+          "attribute": "subAccountButton",
+          "description": "if true, SubAccount button will be visible",
+          "type": "boolean"
+        },
+        {
+          "name": "subAccountLabel",
+          "attribute": "subAccountLabel",
+          "description": "* * SubAccount label",
+          "type": "string",
+          "default": "\"\""
+        },
+        {
+          "name": "hideMainIcon",
+          "attribute": "hideMainIcon",
+          "description": "if true, the location icon will be hidden",
+          "type": "boolean",
+          "default": "false"
+        },
+        {
+          "name": "hideLocationIcon",
+          "attribute": "hideLocationIcon",
+          "description": "if true, the main(1st) icon will be hidden",
+          "type": "boolean",
+          "default": "false"
+        },
+        {
+          "name": "extraIconSlot",
+          "attribute": "extraIconSlot",
+          "description": "if true, the main(1st) icon will be hidden",
+          "type": "boolean",
+          "default": "false"
+        },
+        {
+          "name": "hideHolderActions",
+          "attribute": "hideHolderActions",
+          "description": "if true, will hide \"more\" button",
+          "type": "boolean",
+          "default": "false"
+        },
+        {
+          "name": "hideArrowIcon",
+          "attribute": "hideArrowIcon",
+          "description": "if true, will hide the right arrow icon",
+          "type": "boolean",
+          "default": "false"
+        },
+        {
+          "name": "hideSubButtonIcon",
+          "attribute": "hideSubButtonIcon",
+          "description": "if true, will hide the sub-account-button icons",
+          "type": "boolean",
+          "default": "false"
+        }
+      ],
+      "events": [
+        {
+          "name": "srui-open-account",
+          "description": "Event triggered when user clicks on card (but not on specific action parts of the card)"
+        },
+        {
+          "name": "srui-open-sub-accounts",
+          "description": "Event triggered when user clicks on the sub accounts number"
+        }
+      ],
+      "slots": [
+        {
+          "name": "extra_content",
+          "description": "to fill with extra component content"
+        },
+        {
+          "name": "more-button-content",
+          "description": "to fill content of more-button"
+        },
+        {
+          "name": "extra-main-icon",
+          "description": "to add other main icon"
+        }
+      ]
+    },
+    {
+      "name": "srui-action-card",
+      "path": "./src\\components\\cards\\action-card\\action-card.ts",
+      "description": "Generic card with an Icon, Title, description and call to action",
+      "attributes": [
+        {
+          "name": "icon",
+          "description": "Icon name (for font icons)",
+          "type": "string",
+          "default": "\"dots-more\""
+        },
+        {
+          "name": "iconSrc",
+          "description": "Icon src (for image icons)",
+          "type": "string",
+          "default": "\"\""
+        },
+        {
+          "name": "title",
+          "description": "Title",
+          "type": "string",
+          "default": "\"\""
+        },
+        {
+          "name": "buttonLabel",
+          "description": "Button label",
+          "type": "string",
+          "default": "\"\""
+        },
+        {
+          "name": "actionColor",
+          "description": "Action Button color",
+          "type": "string",
+          "default": "\"primary-color\""
+        },
+        {
+          "name": "disabledButton",
+          "description": "If true the button will be disabled",
+          "type": "boolean",
+          "default": "false"
+        }
+      ],
+      "properties": [
+        {
+          "name": "icon",
+          "attribute": "icon",
+          "description": "Icon name (for font icons)",
+          "type": "string",
+          "default": "\"dots-more\""
+        },
+        {
+          "name": "iconSrc",
+          "attribute": "iconSrc",
+          "description": "Icon src (for image icons)",
+          "type": "string",
+          "default": "\"\""
+        },
+        {
+          "name": "title",
+          "attribute": "title",
+          "description": "Title",
+          "type": "string",
+          "default": "\"\""
+        },
+        {
+          "name": "buttonLabel",
+          "attribute": "buttonLabel",
+          "description": "Button label",
+          "type": "string",
+          "default": "\"\""
+        },
+        {
+          "name": "actionColor",
+          "attribute": "actionColor",
+          "description": "Action Button color",
+          "type": "string",
+          "default": "\"primary-color\""
+        },
+        {
+          "name": "disabledButton",
+          "attribute": "disabledButton",
+          "description": "If true the button will be disabled",
+          "type": "boolean",
+          "default": "false"
+        }
+      ],
+      "events": [
+        {
+          "name": "srui-cta-click",
+          "description": "Event triggered when call to action is clicked"
+        }
+      ],
+      "slots": [
+        {
+          "name": "default",
+          "description": "Card description"
+        }
+      ]
+    },
+    {
+      "name": "srui-contact-info-card",
+      "path": "./src\\components\\cards\\contact-info-card\\contact-info-card.ts",
+      "description": "Two columns Contact info holder card",
+      "attributes": [
+        {
+          "name": "mainTitle",
+          "description": "Main Contact Title",
+          "type": "string",
+          "default": "\"\""
+        },
+        {
+          "name": "secondaryTitle",
+          "description": "Secondary Contact Title",
+          "type": "string",
+          "default": "\"\""
+        }
+      ],
+      "properties": [
+        {
+          "name": "mainTitle",
+          "attribute": "mainTitle",
+          "description": "Main Contact Title",
+          "type": "string",
+          "default": "\"\""
+        },
+        {
+          "name": "secondaryTitle",
+          "attribute": "secondaryTitle",
+          "description": "Secondary Contact Title",
+          "type": "string",
+          "default": "\"\""
+        }
+      ],
+      "slots": [
+        {
+          "name": "main",
+          "description": "Main address and contact (1st column)"
+        },
+        {
+          "name": "secondary",
+          "description": "Seconday (billing) address and contact (2nd column)"
+        }
+      ]
+    },
+    {
+      "name": "srui-option-card",
+      "path": "./src\\components\\cards\\option-card\\option-card.ts",
+      "description": "Options block item - Provides a slot for a more button (or other uses)",
+      "attributes": [
+        {
+          "name": "last",
+          "description": "Removes bottom separator",
+          "type": "boolean",
+          "default": "false"
+        }
+      ],
+      "properties": [
+        {
+          "name": "last",
+          "attribute": "last",
+          "description": "Removes bottom separator",
+          "type": "boolean",
+          "default": "false"
+        }
+      ],
+      "events": [
+        {
+          "name": "srui-options-card-hover",
+          "description": "Option card mouseEnter"
+        }
+      ],
+      "slots": [
+        {
+          "name": "more_button",
+          "description": "Slot to add a more button (or similar) which will provide actions for this option"
+        },
+        {
+          "name": "title",
+          "description": "Option title"
+        },
+        {
+          "name": "icon_placeholder",
+          "description": "Placeholder for external icon or any element."
+        }
+      ]
+    },
+    {
+      "name": "srui-sim-card",
+      "path": "./src\\components\\cards\\sim-card\\sim-card.ts",
+      "description": "Sim card info display line",
+      "attributes": [
+        {
+          "name": "active",
+          "description": "State for the sim card (if true shows Active)",
+          "type": "boolean",
+          "default": "false"
+        },
+        {
+          "name": "last",
+          "description": "Removes bottom separator",
+          "type": "boolean",
+          "default": "false"
+        },
+        {
+          "name": "iccidLabel",
+          "description": "Label for ICCID info",
+          "type": "string",
+          "default": "\"ICCID\""
+        },
+        {
+          "name": "pinPukLabel",
+          "description": "Label for Pin Puk info",
+          "type": "string",
+          "default": "\"PIN / PUK\""
+        },
+        {
+          "name": "deviceLabel",
+          "description": "Label for device info",
+          "type": "string",
+          "default": "\"Device\""
+        },
+        {
+          "name": "stateLabel",
+          "description": "Label for state info",
+          "type": "string",
+          "default": "\"Active\""
+        },
+        {
+          "name": "stateColor",
+          "description": "Color for label info",
+          "type": "string",
+          "default": "\"active-color\""
+        }
+      ],
+      "properties": [
+        {
+          "name": "active",
+          "attribute": "active",
+          "description": "State for the sim card (if true shows Active)",
+          "type": "boolean",
+          "default": "false"
+        },
+        {
+          "name": "last",
+          "attribute": "last",
+          "description": "Removes bottom separator",
+          "type": "boolean",
+          "default": "false"
+        },
+        {
+          "name": "iccidLabel",
+          "attribute": "iccidLabel",
+          "description": "Label for ICCID info",
+          "type": "string",
+          "default": "\"ICCID\""
+        },
+        {
+          "name": "pinPukLabel",
+          "attribute": "pinPukLabel",
+          "description": "Label for Pin Puk info",
+          "type": "string",
+          "default": "\"PIN / PUK\""
+        },
+        {
+          "name": "deviceLabel",
+          "attribute": "deviceLabel",
+          "description": "Label for device info",
+          "type": "string",
+          "default": "\"Device\""
+        },
+        {
+          "name": "stateLabel",
+          "attribute": "stateLabel",
+          "description": "Label for state info",
+          "type": "string",
+          "default": "\"Active\""
+        },
+        {
+          "name": "stateColor",
+          "attribute": "stateColor",
+          "description": "Color for label info",
+          "type": "string",
+          "default": "\"active-color\""
+        }
+      ],
+      "slots": [
+        {
+          "name": "title",
+          "description": "Sim card name / type"
+        },
+        {
+          "name": "iccid",
+          "description": "ICCID of the sim card"
+        },
+        {
+          "name": "pin_puk",
+          "description": "PIN / PUK code of the card"
+        },
+        {
+          "name": "device",
+          "description": "Device associated to the sim card"
+        },
+        {
+          "name": "more_button",
+          "description": "Slot to add a more button (or similar) which will provide actions for this option"
+        }
+      ]
+    },
+    {
+      "name": "srui-subscriber-card",
+      "path": "./src\\components\\cards\\subscriber-card\\subscriber-card.ts",
+      "description": "Subscriber card",
+      "attributes": [
+        {
+          "name": "salutationLabel",
+          "description": "Label for salutation field",
+          "type": "string",
+          "default": "\"Salutation\""
+        },
+        {
+          "name": "nameLabel",
+          "description": "Label for name field",
+          "type": "string",
+          "default": "\"Name\""
+        },
+        {
+          "name": "emailLabel",
+          "description": "Label for email field",
+          "type": "string",
+          "default": "\"Email\""
+        },
+        {
+          "name": "addressLabel",
+          "description": "Label for address field",
+          "type": "string",
+          "default": "\"Address\""
+        },
+        {
+          "name": "languageLabel",
+          "description": "Label for address field",
+          "type": "string",
+          "default": "\"Language\""
+        }
+      ],
+      "properties": [
+        {
+          "name": "salutationLabel",
+          "attribute": "salutationLabel",
+          "description": "Label for salutation field",
+          "type": "string",
+          "default": "\"Salutation\""
+        },
+        {
+          "name": "nameLabel",
+          "attribute": "nameLabel",
+          "description": "Label for name field",
+          "type": "string",
+          "default": "\"Name\""
+        },
+        {
+          "name": "emailLabel",
+          "attribute": "emailLabel",
+          "description": "Label for email field",
+          "type": "string",
+          "default": "\"Email\""
+        },
+        {
+          "name": "addressLabel",
+          "attribute": "addressLabel",
+          "description": "Label for address field",
+          "type": "string",
+          "default": "\"Address\""
+        },
+        {
+          "name": "languageLabel",
+          "attribute": "languageLabel",
+          "description": "Label for address field",
+          "type": "string",
+          "default": "\"Language\""
+        }
+      ],
+      "slots": [
+        {
+          "name": "name",
+          "description": "Name of the subscriber"
+        },
+        {
+          "name": "email",
+          "description": "Email"
+        },
+        {
+          "name": "language",
+          "description": "Language"
+        },
+        {
+          "name": "address",
+          "description": "Address"
+        },
+        {
+          "name": "zip",
+          "description": "Zip code"
+        }
+      ]
+    },
+    {
+      "name": "srui-subscription-card",
+      "path": "./src\\components\\cards\\subscription-card\\subscription-card.ts",
+      "description": "Line component for subcription card with edit button",
+      "attributes": [
+        {
+          "name": "showState",
+          "description": "If true, line is a state line and doesn't show title or info, just the state info",
+          "type": "boolean",
+          "default": "false"
+        },
+        {
+          "name": "last",
+          "description": "Removes bottom separator",
+          "type": "boolean",
+          "default": "false"
+        },
+        {
+          "name": "editMode",
+          "description": "if true the edit icon/button is not visible",
+          "type": "boolean",
+          "default": "false"
+        },
+        {
+          "name": "stateString",
+          "description": "State text string",
+          "type": "string",
+          "default": "\"Active\""
+        },
+        {
+          "name": "stateColor",
+          "description": "State text color (uses global-styles color variables)",
+          "type": "string",
+          "default": "\"valid-color\""
+        },
+        {
+          "name": "iconColor",
+          "description": "Active state string",
+          "type": "string",
+          "default": "\"gray3-color\""
+        },
+        {
+          "name": "disabledButton",
+          "description": "If true the button will be disabled",
+          "type": "boolean",
+          "default": "false"
+        }
+      ],
+      "properties": [
+        {
+          "name": "showState",
+          "attribute": "showState",
+          "description": "If true, line is a state line and doesn't show title or info, just the state info",
+          "type": "boolean",
+          "default": "false"
+        },
+        {
+          "name": "last",
+          "attribute": "last",
+          "description": "Removes bottom separator",
+          "type": "boolean",
+          "default": "false"
+        },
+        {
+          "name": "editMode",
+          "attribute": "editMode",
+          "description": "if true the edit icon/button is not visible",
+          "type": "boolean",
+          "default": "false"
+        },
+        {
+          "name": "stateString",
+          "attribute": "stateString",
+          "description": "State text string",
+          "type": "string",
+          "default": "\"Active\""
+        },
+        {
+          "name": "stateColor",
+          "attribute": "stateColor",
+          "description": "State text color (uses global-styles color variables)",
+          "type": "string",
+          "default": "\"valid-color\""
+        },
+        {
+          "name": "iconColor",
+          "attribute": "iconColor",
+          "description": "Active state string",
+          "type": "string",
+          "default": "\"gray3-color\""
+        },
+        {
+          "name": "disabledButton",
+          "attribute": "disabledButton",
+          "description": "If true the button will be disabled",
+          "type": "boolean",
+          "default": "false"
+        }
+      ],
+      "events": [
+        {
+          "name": "srui-click-edit",
+          "description": "Event triggered when line edit button is clicked"
+        }
+      ],
+      "slots": [
+        {
+          "name": "label",
+          "description": "Label for the line"
+        },
+        {
+          "name": "title",
+          "description": "Line title"
+        },
+        {
+          "name": "info",
+          "description": "Subtitle info"
+        }
+      ]
+    },
+    {
+      "name": "srui-title-text-card",
+      "path": "./src\\components\\cards\\title-text-card\\title-text-card.ts",
+      "description": "Simple element with a label and text",
+      "attributes": [
+        {
+          "name": "title",
+          "description": "Title of the element",
+          "type": "string",
+          "default": "\"\""
+        },
+        {
+          "name": "largeTitle",
+          "description": "If true the space for the title will be bigger (43,33%)",
+          "type": "boolean",
+          "default": "false"
+        }
+      ],
+      "properties": [
+        {
+          "name": "title",
+          "attribute": "title",
+          "description": "Title of the element",
+          "type": "string",
+          "default": "\"\""
+        },
+        {
+          "name": "largeTitle",
+          "attribute": "largeTitle",
+          "description": "If true the space for the title will be bigger (43,33%)",
+          "type": "boolean",
+          "default": "false"
+        }
+      ],
+      "slots": [
+        {
+          "name": "",
+          "description": "content text"
+        }
+      ]
+    },
+    {
+      "name": "srui-toggle-card",
+      "path": "./src\\components\\cards\\toggle-card\\toggle-card.ts",
+      "description": "Toggle card",
+      "attributes": [
+        {
+          "name": "title",
+          "description": "The card Title",
+          "type": "string",
+          "default": "\"\""
+        },
+        {
+          "name": "subTitle",
+          "description": "The card sub-itle",
+          "type": "string",
+          "default": "\"\""
+        },
+        {
+          "name": "active",
+          "description": "if true the toggle is active/checked",
+          "type": "boolean",
+          "default": "false"
+        },
+        {
+          "name": "last",
+          "description": "Removes bottom separator",
+          "type": "boolean",
+          "default": "false"
+        },
+        {
+          "name": "compact",
+          "description": "Reduces height and removes bottom border",
+          "type": "boolean",
+          "default": "false"
+        },
+        {
+          "name": "toggleSize",
+          "description": "Set toggle size (small, medium, large)",
+          "type": "string",
+          "default": "\"medium\""
+        },
+        {
+          "name": "tooltip",
+          "description": "if filled will add tooltip info (icon with info on hover)",
+          "type": "string",
+          "default": "\"\""
+        }
+      ],
+      "properties": [
+        {
+          "name": "title",
+          "attribute": "title",
+          "description": "The card Title",
+          "type": "string",
+          "default": "\"\""
+        },
+        {
+          "name": "subTitle",
+          "attribute": "subTitle",
+          "description": "The card sub-itle",
+          "type": "string",
+          "default": "\"\""
+        },
+        {
+          "name": "active",
+          "attribute": "active",
+          "description": "if true the toggle is active/checked",
+          "type": "boolean",
+          "default": "false"
+        },
+        {
+          "name": "last",
+          "attribute": "last",
+          "description": "Removes bottom separator",
+          "type": "boolean",
+          "default": "false"
+        },
+        {
+          "name": "compact",
+          "attribute": "compact",
+          "description": "Reduces height and removes bottom border",
+          "type": "boolean",
+          "default": "false"
+        },
+        {
+          "name": "toggleSize",
+          "attribute": "toggleSize",
+          "description": "Set toggle size (small, medium, large)",
+          "type": "string",
+          "default": "\"medium\""
+        },
+        {
+          "name": "tooltip",
+          "attribute": "tooltip",
+          "description": "if filled will add tooltip info (icon with info on hover)",
+          "type": "string",
+          "default": "\"\""
+        }
+      ],
+      "slots": [
+        {
+          "name": "title",
+          "description": "Card title"
+        },
+        {
+          "name": "sub-title",
+          "description": "Card sub-title"
+        }
+      ]
+    },
+    {
+      "name": "srui-user-card",
+      "path": "./src\\components\\cards\\user-card\\user-card.ts",
+      "description": "User Profile card",
+      "attributes": [
+        {
+          "name": "disabled",
+          "type": "boolean",
+          "default": "false"
+        }
+      ],
+      "properties": [
+        {
+          "name": "disabled",
+          "attribute": "disabled",
+          "type": "boolean",
+          "default": "false"
+        }
+      ],
+      "slots": [
+        {
+          "name": "initials",
+          "description": "The user first and last name initials"
+        },
+        {
+          "name": "name",
+          "description": "The name of the user"
+        },
+        {
+          "name": "role"
+        }
+      ]
+    },
+    {
+      "name": "srui-content-block",
+      "path": "./src\\components\\containers\\content-block\\content-block.ts",
+      "description": "Generic content block with header title, action and content layout",
+      "attributes": [
+        {
+          "name": "notEditable",
+          "description": "if true the edit icon/button is not visible",
+          "type": "boolean",
+          "default": "false"
+        },
+        {
+          "name": "secondColumn",
+          "description": "if true 2nd column will be avaiable",
+          "type": "boolean",
+          "default": "false"
+        },
+        {
+          "name": "secondColumnNotEditable",
+          "description": "* * if true the edit icon/button is not visible",
+          "type": "boolean",
+          "default": "false"
+        },
+        {
+          "name": "adaptiveHeight",
+          "description": "* * if true the the height will adapt the content",
+          "type": "boolean",
+          "default": "false"
+        }
+      ],
+      "properties": [
+        {
+          "name": "notEditable",
+          "attribute": "notEditable",
+          "description": "if true the edit icon/button is not visible",
+          "type": "boolean",
+          "default": "false"
+        },
+        {
+          "name": "secondColumn",
+          "attribute": "secondColumn",
+          "description": "if true 2nd column will be avaiable",
+          "type": "boolean",
+          "default": "false"
+        },
+        {
+          "name": "secondColumnNotEditable",
+          "attribute": "secondColumnNotEditable",
+          "description": "* * if true the edit icon/button is not visible",
+          "type": "boolean",
+          "default": "false"
+        },
+        {
+          "name": "adaptiveHeight",
+          "attribute": "adaptiveHeight",
+          "description": "* * if true the the height will adapt the content",
+          "type": "boolean",
+          "default": "false"
+        }
+      ],
+      "slots": [
+        {
+          "name": "title",
+          "description": "The block title (header)"
+        },
+        {
+          "name": "action",
+          "description": "Holder for an action button on the top right of the box"
+        },
+        {
+          "name": "content",
+          "description": "The content of the block"
+        },
+        {
+          "name": "title_2nd-column",
+          "description": "The block title (header) for 2nd column"
+        },
+        {
+          "name": "content_2nd-column",
+          "description": "The content of the block for 2nd column"
+        },
+        {
+          "name": "footer",
+          "description": "footer of the block (optional)"
+        }
+      ]
+    },
+    {
+      "name": "srui-device-block",
+      "path": "./src\\components\\containers\\device-block\\device-block.ts",
+      "description": "Subscriber device block",
+      "attributes": [
+        {
+          "name": "imgSrc",
+          "description": "Location of the device image",
+          "type": "string",
+          "default": "\"\""
+        },
+        {
+          "name": "instalments",
+          "description": "Number of paid instalments",
+          "type": "number",
+          "default": "0"
+        },
+        {
+          "name": "maxInstalments",
+          "description": "Total number of instalments",
+          "type": "number",
+          "default": "0"
+        },
+        {
+          "name": "devicePlanTitle",
+          "description": "Device plan title",
+          "type": "string",
+          "default": "\"Device Plan\""
+        },
+        {
+          "name": "deviceLabel",
+          "description": "Device Label",
+          "type": "string",
+          "default": "\"Device\""
+        },
+        {
+          "name": "priceLabel",
+          "description": "Price Label",
+          "type": "string",
+          "default": "\"Price\""
+        },
+        {
+          "name": "paymentLabel",
+          "description": "Price Upfront Payment Label",
+          "type": "string",
+          "default": "\"Upfront Payment\""
+        },
+        {
+          "name": "monthlyLabel",
+          "description": "Monthly installment Label",
+          "type": "string",
+          "default": "\"Monthly installment\""
+        },
+        {
+          "name": "remainingLabel",
+          "description": "Monthly Remaining installments",
+          "type": "string",
+          "default": "\"Remaining installments\""
+        },
+        {
+          "name": "instalmentsVisible",
+          "description": "Instalments Label",
+          "type": "boolean",
+          "default": "false"
+        },
+        {
+          "name": "instalmentsLabel",
+          "description": "Instalments Label",
+          "type": "string",
+          "default": "\"Instalments\""
+        },
+        {
+          "name": "buyoutLabel",
+          "description": "Buyout device Label",
+          "type": "string",
+          "default": "\"Buyout Device\""
+        },
+        {
+          "name": "disabledButton",
+          "description": "If true the button will be disabled",
+          "type": "boolean",
+          "default": "false"
+        }
+      ],
+      "properties": [
+        {
+          "name": "imgSrc",
+          "attribute": "imgSrc",
+          "description": "Location of the device image",
+          "type": "string",
+          "default": "\"\""
+        },
+        {
+          "name": "instalments",
+          "attribute": "instalments",
+          "description": "Number of paid instalments",
+          "type": "number",
+          "default": "0"
+        },
+        {
+          "name": "maxInstalments",
+          "attribute": "maxInstalments",
+          "description": "Total number of instalments",
+          "type": "number",
+          "default": "0"
+        },
+        {
+          "name": "devicePlanTitle",
+          "attribute": "devicePlanTitle",
+          "description": "Device plan title",
+          "type": "string",
+          "default": "\"Device Plan\""
+        },
+        {
+          "name": "deviceLabel",
+          "attribute": "deviceLabel",
+          "description": "Device Label",
+          "type": "string",
+          "default": "\"Device\""
+        },
+        {
+          "name": "priceLabel",
+          "attribute": "priceLabel",
+          "description": "Price Label",
+          "type": "string",
+          "default": "\"Price\""
+        },
+        {
+          "name": "paymentLabel",
+          "attribute": "paymentLabel",
+          "description": "Price Upfront Payment Label",
+          "type": "string",
+          "default": "\"Upfront Payment\""
+        },
+        {
+          "name": "monthlyLabel",
+          "attribute": "monthlyLabel",
+          "description": "Monthly installment Label",
+          "type": "string",
+          "default": "\"Monthly installment\""
+        },
+        {
+          "name": "remainingLabel",
+          "attribute": "remainingLabel",
+          "description": "Monthly Remaining installments",
+          "type": "string",
+          "default": "\"Remaining installments\""
+        },
+        {
+          "name": "instalmentsVisible",
+          "attribute": "instalmentsVisible",
+          "description": "Instalments Label",
+          "type": "boolean",
+          "default": "false"
+        },
+        {
+          "name": "instalmentsLabel",
+          "attribute": "instalmentsLabel",
+          "description": "Instalments Label",
+          "type": "string",
+          "default": "\"Instalments\""
+        },
+        {
+          "name": "buyoutLabel",
+          "attribute": "buyoutLabel",
+          "description": "Buyout device Label",
+          "type": "string",
+          "default": "\"Buyout Device\""
+        },
+        {
+          "name": "disabledButton",
+          "attribute": "disabledButton",
+          "description": "If true the button will be disabled",
+          "type": "boolean",
+          "default": "false"
+        }
+      ],
+      "events": [
+        {
+          "name": "srui-click-buyout",
+          "description": "Event triggered when Buyout device button is clicked"
+        }
+      ],
+      "slots": [
+        {
+          "name": "device",
+          "description": "Device name and model"
+        },
+        {
+          "name": "price",
+          "description": "Device price"
+        },
+        {
+          "name": "monthly",
+          "description": "Device monthly installment"
+        },
+        {
+          "name": "remaining",
+          "description": "Device remaining installments"
+        }
+      ]
+    },
+    {
+      "name": "srui-expandable-block-group",
+      "path": "./src\\components\\containers\\expandable-block-group\\expandable-block-group.ts",
+      "description": "Container to group expandable blocks in an accordean manner",
+      "properties": [
+        {
+          "name": "activeBlockIdx",
+          "description": "Expandable content internal state (this can't be used to control component state)",
+          "type": "number",
+          "default": "-1"
+        }
+      ],
+      "slots": [
+        {
+          "name": "default",
+          "description": "where the srui-expandable-block should go (nothing else!)"
+        }
+      ]
+    },
+    {
+      "name": "srui-expandable-block",
+      "path": "./src\\components\\containers\\expandable-block\\expandable-block.ts",
+      "description": "Generic expandable block",
+      "attributes": [
+        {
+          "name": "open",
+          "description": "Expandable content internal state (this can't be used to control component state)",
+          "type": "boolean",
+          "default": "false"
+        },
+        {
+          "name": "initStateOpen",
+          "description": "To start Block with open state",
+          "type": "boolean",
+          "default": "false"
+        },
+        {
+          "name": "position",
+          "description": "To be used in accordean groups where collapsed blocks stick together.\r\nDon't specify this attribute for standalone use\r\n[first, middle, last]",
+          "type": "string"
+        },
+        {
+          "name": "opening",
+          "type": "boolean",
+          "default": "false"
+        }
+      ],
+      "properties": [
+        {
+          "name": "open",
+          "attribute": "open",
+          "description": "Expandable content internal state (this can't be used to control component state)",
+          "type": "boolean",
+          "default": "false"
+        },
+        {
+          "name": "initStateOpen",
+          "attribute": "initStateOpen",
+          "description": "To start Block with open state",
+          "type": "boolean",
+          "default": "false"
+        },
+        {
+          "name": "blockIdx",
+          "type": "number",
+          "default": "0"
+        },
+        {
+          "name": "position",
+          "attribute": "position",
+          "description": "To be used in accordean groups where collapsed blocks stick together.\r\nDon't specify this attribute for standalone use\r\n[first, middle, last]",
+          "type": "string"
+        },
+        {
+          "name": "opening",
+          "attribute": "opening",
+          "type": "boolean",
+          "default": "false"
+        }
+      ],
+      "events": [
+        {
+          "name": "srui-block-toggle",
+          "description": "Event triggered when user toggles box"
+        }
+      ],
+      "slots": [
+        {
+          "name": "title"
+        },
+        {
+          "name": "content"
+        }
+      ]
+    },
+    {
+      "name": "srui-shortcuts-widgets-container",
+      "path": "./src\\components\\containers\\shortcuts-widgets-container.ts",
+      "description": "Widget container with editition mode",
+      "attributes": [
+        {
+          "name": "editMode",
+          "description": "Edit mode, shows sticky bottom bar with done button and add widget",
+          "type": "boolean",
+          "default": "false"
+        },
+        {
+          "name": "editText",
+          "description": "Start edit mode button label",
+          "type": "string",
+          "default": "\"Edit Shortcuts\""
+        },
+        {
+          "name": "doneText",
+          "description": "Complete edition button label",
+          "type": "string",
+          "default": "\"Done Editing\""
+        },
+        {
+          "name": "editModeDisabled",
+          "description": "Disable Edit mode, removes edit button",
+          "type": "boolean",
+          "default": "false"
+        },
+        {
+          "name": "hasMaxWidth",
+          "description": "If true the widgets length is < 2 grid elements should have a max with",
+          "type": "boolean",
+          "default": "false"
+        }
+      ],
+      "properties": [
+        {
+          "name": "editMode",
+          "attribute": "editMode",
+          "description": "Edit mode, shows sticky bottom bar with done button and add widget",
+          "type": "boolean",
+          "default": "false"
+        },
+        {
+          "name": "editText",
+          "attribute": "editText",
+          "description": "Start edit mode button label",
+          "type": "string",
+          "default": "\"Edit Shortcuts\""
+        },
+        {
+          "name": "doneText",
+          "attribute": "doneText",
+          "description": "Complete edition button label",
+          "type": "string",
+          "default": "\"Done Editing\""
+        },
+        {
+          "name": "editModeDisabled",
+          "attribute": "editModeDisabled",
+          "description": "Disable Edit mode, removes edit button",
+          "type": "boolean",
+          "default": "false"
+        },
+        {
+          "name": "hasMaxWidth",
+          "attribute": "hasMaxWidth",
+          "description": "If true the widgets length is < 2 grid elements should have a max with",
+          "type": "boolean",
+          "default": "false"
+        }
+      ],
+      "events": [
+        {
+          "name": "srui-edit-mode",
+          "description": "Event triggered when user click on edit"
+        },
+        {
+          "name": "srui-edit-complete",
+          "description": "Event triggered when user click on done editing"
+        }
+      ],
+      "slots": [
+        {
+          "name": "default",
+          "description": "holder for the widgets"
+        }
+      ]
+    },
+    {
+      "name": "srui-sidenav-container",
+      "path": "./src\\components\\containers\\sidenav-container.ts",
+      "description": "Sidenav Layout container",
+      "attributes": [
+        {
+          "name": "open",
+          "description": "Mobile menu state",
+          "type": "boolean",
+          "default": "false"
+        },
+        {
+          "name": "fluid",
+          "description": "Makes content not limited to --srui-content-max-width",
+          "type": "boolean",
+          "default": "false"
+        }
+      ],
+      "properties": [
+        {
+          "name": "open",
+          "attribute": "open",
+          "description": "Mobile menu state",
+          "type": "boolean",
+          "default": "false"
+        },
+        {
+          "name": "fluid",
+          "attribute": "fluid",
+          "description": "Makes content not limited to --srui-content-max-width",
+          "type": "boolean",
+          "default": "false"
+        }
+      ],
+      "slots": [
+        {
+          "name": "sidebar",
+          "description": "Sidebar content"
+        },
+        {
+          "name": "header",
+          "description": "Fixed header content"
+        },
+        {
+          "name": "content",
+          "description": "page content"
+        },
+        {
+          "name": "footer",
+          "description": "page footer content"
+        }
+      ]
+    },
+    {
+      "name": "srui-table-container",
+      "path": "./src\\components\\containers\\table-container\\table-container.ts",
+      "description": "Generic table container",
+      "slots": [
+        {
+          "name": "header-left-side",
+          "description": "right side header of the block (input search placement)"
+        },
+        {
+          "name": "header-right-side",
+          "description": "right side header of the block (filtering, actions placement)"
+        },
+        {
+          "name": "content",
+          "description": "The content of the block"
+        },
+        {
+          "name": "footer",
+          "description": "footer of the block (optional)"
+        }
+      ]
+    },
+    {
+      "name": "srui-round-counter",
+      "path": "./src\\components\\counters\\round-counter\\round-counter.ts",
+      "description": "A simple small round counter",
+      "attributes": [
+        {
+          "name": "color",
+          "description": "Color scheme for the counter: ['primary', 'primary-inverted']\r\nprimary has forecolor as primary and white as backgorund",
+          "type": "string",
+          "default": "\"primary\""
+        }
+      ],
+      "properties": [
+        {
+          "name": "color",
+          "attribute": "color",
+          "description": "Color scheme for the counter: ['primary', 'primary-inverted']\r\nprimary has forecolor as primary and white as backgorund",
+          "type": "string",
+          "default": "\"primary\""
+        }
+      ],
+      "slots": [
+        {
+          "name": "default",
+          "description": "the counter content. eg: the count number"
+        }
+      ]
+    },
+    {
+      "name": "srui-footer",
+      "path": "./src\\components\\footer\\footer.ts",
+      "description": "Footer component",
+      "slots": [
+        {
+          "name": "copyright",
+          "description": "Company naming and copyright"
+        },
+        {
+          "name": "legal",
+          "description": "Footer content like legal links etc"
+        },
+        {
+          "name": "version",
+          "description": "Site version"
+        }
+      ]
+    },
+    {
+      "name": "srui-checkbox",
+      "path": "./src\\components\\form-elements\\checkbox\\checkbox.ts",
+      "attributes": [
+        {
+          "name": "disabled",
+          "description": "Disable checkbox",
+          "type": "boolean",
+          "default": "false"
+        },
+        {
+          "name": "checked",
+          "description": "Check state",
+          "type": "boolean",
+          "default": "false"
+        },
+        {
+          "name": "round",
+          "description": "Round checkbox",
+          "type": "boolean",
+          "default": "false"
+        },
+        {
+          "name": "medium",
+          "description": "Medium size checkbox",
+          "type": "boolean",
+          "default": "false"
+        }
+      ],
+      "properties": [
+        {
+          "name": "disabled",
+          "attribute": "disabled",
+          "description": "Disable checkbox",
+          "type": "boolean",
+          "default": "false"
+        },
+        {
+          "name": "checked",
+          "attribute": "checked",
+          "description": "Check state",
+          "type": "boolean",
+          "default": "false"
+        },
+        {
+          "name": "round",
+          "attribute": "round",
+          "description": "Round checkbox",
+          "type": "boolean",
+          "default": "false"
+        },
+        {
+          "name": "medium",
+          "attribute": "medium",
+          "description": "Medium size checkbox",
+          "type": "boolean",
+          "default": "false"
+        }
+      ],
+      "events": [
+        {
+          "name": "srui-change",
+          "description": "Dispatched when the checked property changes due to a user interaction."
+        }
+      ],
+      "slots": [
+        {
+          "name": "default",
+          "description": "Checkbox Label Content"
+        }
+      ]
+    },
+    {
+      "name": "srui-input",
+      "path": "./src\\components\\form-elements\\input\\input.ts",
+      "description": "This component is not complete and is mostly used as a placeholder.\r\nAngular Material input should be used instead",
+      "attributes": [
+        {
+          "name": "value",
+          "type": "string",
+          "default": "\"\""
+        },
+        {
+          "name": "placeholder",
+          "type": "string",
+          "default": "\"\""
+        },
+        {
+          "name": "size",
+          "type": "string",
+          "default": "\"default\""
+        },
+        {
+          "name": "type",
+          "type": "string",
+          "default": "\"text\""
+        },
+        {
+          "name": "element",
+          "type": "string",
+          "default": "\"\""
+        },
+        {
+          "name": "noBorder",
+          "type": "boolean",
+          "default": "false"
+        }
+      ],
+      "properties": [
+        {
+          "name": "value",
+          "attribute": "value",
+          "type": "string",
+          "default": "\"\""
+        },
+        {
+          "name": "placeholder",
+          "attribute": "placeholder",
+          "type": "string",
+          "default": "\"\""
+        },
+        {
+          "name": "size",
+          "attribute": "size",
+          "type": "string",
+          "default": "\"default\""
+        },
+        {
+          "name": "type",
+          "attribute": "type",
+          "type": "string",
+          "default": "\"text\""
+        },
+        {
+          "name": "element",
+          "attribute": "element",
+          "type": "string",
+          "default": "\"\""
+        },
+        {
+          "name": "noBorder",
+          "attribute": "noBorder",
+          "type": "boolean",
+          "default": "false"
+        }
+      ]
+    },
+    {
+      "name": "srui-simple-select",
+      "path": "./src\\components\\form-elements\\simple-select\\simple-select.ts",
+      "attributes": [
+        {
+          "name": "subNavigation",
+          "type": "boolean",
+          "default": "false"
+        }
+      ],
+      "properties": [
+        {
+          "name": "subNavigation",
+          "attribute": "subNavigation",
+          "type": "boolean",
+          "default": "false"
+        }
+      ]
+    },
+    {
+      "name": "srui-toggle",
+      "path": "./src\\components\\form-elements\\toggle\\toggle.ts",
+      "description": "This component can be used but eventually using the Angular Material equivalent is preferred,\r\nat least in a form context.",
+      "attributes": [
+        {
+          "name": "label",
+          "description": "Toggle label",
+          "type": "string",
+          "default": "\"\""
+        },
+        {
+          "name": "disabled",
+          "description": "Disable toggle",
+          "type": "boolean",
+          "default": "false"
+        },
+        {
+          "name": "checked",
+          "description": "Toggle state",
+          "type": "boolean",
+          "default": "false"
+        },
+        {
+          "name": "size",
+          "description": "Size of the checkbox (small, medium, large)",
+          "type": "string",
+          "default": "\"medium\""
+        }
+      ],
+      "properties": [
+        {
+          "name": "label",
+          "attribute": "label",
+          "description": "Toggle label",
+          "type": "string",
+          "default": "\"\""
+        },
+        {
+          "name": "disabled",
+          "attribute": "disabled",
+          "description": "Disable toggle",
+          "type": "boolean",
+          "default": "false"
+        },
+        {
+          "name": "checked",
+          "attribute": "checked",
+          "description": "Toggle state",
+          "type": "boolean",
+          "default": "false"
+        },
+        {
+          "name": "size",
+          "attribute": "size",
+          "description": "Size of the checkbox (small, medium, large)",
+          "type": "string",
+          "default": "\"medium\""
+        }
+      ],
+      "events": [
+        {
+          "name": "srui-change",
+          "description": "Triggers a change event when clicked and state changes. Event detail has the new state"
+        }
+      ],
+      "slots": [
+        {
+          "name": "default",
+          "description": "Toggle label content"
+        }
+      ]
+    },
+    {
+      "name": "srui-icon",
+      "path": "./src\\components\\icon\\icon.ts",
+      "description": "Icon component that offers two different usages: font icon name and image src\r\nSupports multiple standard sizes and colors (colors just for font icons)",
+      "attributes": [
+        {
+          "name": "size",
+          "description": "Icon size ['tiny', 'small', 'medium', 'large', 'inherit']\r\ninherit size only works with icon fonts and the icon will inherit the ancestor element font size",
+          "type": "string",
+          "default": "\"medium\""
+        },
+        {
+          "name": "iconSrc",
+          "description": "Location of the image for image based icons - This attribute is ignored if icon attribute is given",
+          "type": "string",
+          "default": "\"\""
+        },
+        {
+          "name": "icon",
+          "description": "Icon name: must match an existent UI font name",
+          "type": "string",
+          "default": "\"\""
+        },
+        {
+          "name": "color",
+          "description": "Icon color: must match one of the themes css colors:\r\n[primary-color, primary-color-dark, secondary-color, secondary-color-light,\r\npromo-color, valid-color, invalid-color, dark-color, grey-color, white-color, alpha-color, inherit]",
+          "type": "string",
+          "default": "\"primary-color\""
+        }
+      ],
+      "properties": [
+        {
+          "name": "size",
+          "attribute": "size",
+          "description": "Icon size ['tiny', 'small', 'medium', 'large', 'inherit']\r\ninherit size only works with icon fonts and the icon will inherit the ancestor element font size",
+          "type": "string",
+          "default": "\"medium\""
+        },
+        {
+          "name": "iconSrc",
+          "attribute": "iconSrc",
+          "description": "Location of the image for image based icons - This attribute is ignored if icon attribute is given",
+          "type": "string",
+          "default": "\"\""
+        },
+        {
+          "name": "icon",
+          "attribute": "icon",
+          "description": "Icon name: must match an existent UI font name",
+          "type": "string",
+          "default": "\"\""
+        },
+        {
+          "name": "color",
+          "attribute": "color",
+          "description": "Icon color: must match one of the themes css colors:\r\n[primary-color, primary-color-dark, secondary-color, secondary-color-light,\r\npromo-color, valid-color, invalid-color, dark-color, grey-color, white-color, alpha-color, inherit]",
+          "type": "string",
+          "default": "\"primary-color\""
+        }
+      ]
+    },
+    {
+      "name": "srui-info",
+      "path": "./src\\components\\info\\info.ts",
+      "description": "Simple component that displays informational tips",
+      "attributes": [
+        {
+          "name": "tooltip",
+          "description": "add a tooltip block if the string isn't empty",
+          "type": "string",
+          "default": "\"\""
+        }
+      ],
+      "properties": [
+        {
+          "name": "tooltip",
+          "attribute": "tooltip",
+          "description": "add a tooltip block if the string isn't empty",
+          "type": "string",
+          "default": "\"\""
+        }
+      ],
+      "slots": [
+        {
+          "name": "default",
+          "description": "The info message"
+        }
+      ]
+    },
+    {
+      "name": "srui-modal-hardware",
+      "path": "./src\\components\\modals\\modal-hardware.ts",
+      "description": "Modal show hardware",
+      "attributes": [
+        {
+          "name": "imageSrc",
+          "description": "Image src (for device image)",
+          "type": "string",
+          "default": "\"\""
+        }
+      ],
+      "properties": [
+        {
+          "name": "imageSrc",
+          "attribute": "imageSrc",
+          "description": "Image src (for device image)",
+          "type": "string",
+          "default": "\"\""
+        }
+      ],
+      "slots": [
+        {
+          "name": "titlte",
+          "description": "Modal title"
+        },
+        {
+          "name": "sub-title",
+          "description": "Modal sub-title"
+        },
+        {
+          "name": "device",
+          "description": "Modal hardware device"
+        },
+        {
+          "name": "subscriber",
+          "description": "Modal hardware subscriber"
+        }
+      ]
+    },
+    {
+      "name": "srui-modal",
+      "path": "./src\\components\\modals\\modal.ts",
+      "description": "Basic modal structure",
+      "attributes": [
+        {
+          "name": "size",
+          "description": "Modal size [small, default, large] (480px, 640px 980px)",
+          "type": "string",
+          "default": "\"default\""
+        },
+        {
+          "name": "scrollable",
+          "description": "Special inner scrollable mode where content is scrollable while call2action bar is fixed at modal bottom",
+          "type": "boolean",
+          "default": "false"
+        },
+        {
+          "name": "icon",
+          "description": "Icon name (for font icons)",
+          "type": "string",
+          "default": "\"\""
+        },
+        {
+          "name": "iconSrc",
+          "description": "Icon src (for image icons)",
+          "type": "string",
+          "default": "\"\""
+        },
+        {
+          "name": "iconColor",
+          "description": "Icon color",
+          "type": "string",
+          "default": "\"\""
+        }
+      ],
+      "properties": [
+        {
+          "name": "size",
+          "attribute": "size",
+          "description": "Modal size [small, default, large] (480px, 640px 980px)",
+          "type": "string",
+          "default": "\"default\""
+        },
+        {
+          "name": "scrollable",
+          "attribute": "scrollable",
+          "description": "Special inner scrollable mode where content is scrollable while call2action bar is fixed at modal bottom",
+          "type": "boolean",
+          "default": "false"
+        },
+        {
+          "name": "icon",
+          "attribute": "icon",
+          "description": "Icon name (for font icons)",
+          "type": "string",
+          "default": "\"\""
+        },
+        {
+          "name": "iconSrc",
+          "attribute": "iconSrc",
+          "description": "Icon src (for image icons)",
+          "type": "string",
+          "default": "\"\""
+        },
+        {
+          "name": "iconColor",
+          "attribute": "iconColor",
+          "description": "Icon color",
+          "type": "string",
+          "default": "\"\""
+        }
+      ],
+      "events": [
+        {
+          "name": "srui-close-modal",
+          "description": "Event triggered when user clicks on the overlay or close button\r\nEvent detail.origin informs about if close was originated by an overlay or a close button click"
+        }
+      ],
+      "slots": [
+        {
+          "name": "title"
+        },
+        {
+          "name": "into-text",
+          "description": "Text will appear bellow the title"
+        },
+        {
+          "name": "toolbar",
+          "description": "Extra layout header element that stays fixed and present if scrollable mode is on"
+        },
+        {
+          "name": "content"
+        },
+        {
+          "name": "call2action",
+          "description": "Bottom area to add modal's action buttons"
+        },
+        {
+          "name": "top",
+          "description": "A slot to put content before the title and icon"
+        },
+        {
+          "name": "info",
+          "description": "last placeholder where extra info mesage can be added with predefined styling"
+        }
+      ]
+    },
+    {
+      "name": "srui-notification-modal",
+      "path": "./src\\components\\modals\\notification-modal.ts",
+      "description": "Notification Modal",
+      "attributes": [
+        {
+          "name": "notificationType",
+          "description": "Notification type [error, success, alert, info]",
+          "type": "string",
+          "default": "\"info\""
+        },
+        {
+          "name": "title",
+          "description": "Notification Title (Optional. If not set, the title will correspond to the notification type (Success, Error, Warning or Information))",
+          "type": "string",
+          "default": "\"\""
+        }
+      ],
+      "properties": [
+        {
+          "name": "notificationType",
+          "attribute": "notificationType",
+          "description": "Notification type [error, success, alert, info]",
+          "type": "string",
+          "default": "\"info\""
+        },
+        {
+          "name": "title",
+          "attribute": "title",
+          "description": "Notification Title (Optional. If not set, the title will correspond to the notification type (Success, Error, Warning or Information))",
+          "type": "string",
+          "default": "\"\""
+        }
+      ],
+      "slots": [
+        {
+          "name": "info-text",
+          "description": "Notification content (description)"
+        },
+        {
+          "name": "actions",
+          "description": "Bottom area to add modal's action buttons"
+        }
+      ]
+    },
+    {
+      "name": "srui-snackbar",
+      "path": "./src\\components\\modals\\snackbar.ts",
+      "attributes": [
+        {
+          "name": "vAlign",
+          "description": "Snackbar vertical alignment ['', top, center, bottom]\r\n(if empty sting the position will be \"free\")",
+          "type": "string",
+          "default": "\"top\""
+        },
+        {
+          "name": "hAlign",
+          "description": "Snackbar horizontal alignment ['', left, center, left]\r\n(if empty sting the position will be \"free\")",
+          "type": "string",
+          "default": "\"left\""
+        },
+        {
+          "name": "title",
+          "description": "Snackbar title (text)",
+          "type": "string",
+          "default": "\"\""
+        },
+        {
+          "name": "icon",
+          "description": "Icon name (for font icons)",
+          "type": "string",
+          "default": "\"\""
+        },
+        {
+          "name": "iconSrc",
+          "description": "Icon src (for image icons)",
+          "type": "string",
+          "default": "\"\""
+        },
+        {
+          "name": "baseColor",
+          "description": "Base color (icon and text)",
+          "type": "string",
+          "default": "\"\""
+        },
+        {
+          "name": "closeButton",
+          "description": "Add close button to bar",
+          "type": "boolean",
+          "default": "false"
+        }
+      ],
+      "properties": [
+        {
+          "name": "vAlign",
+          "attribute": "vAlign",
+          "description": "Snackbar vertical alignment ['', top, center, bottom]\r\n(if empty sting the position will be \"free\")",
+          "type": "string",
+          "default": "\"top\""
+        },
+        {
+          "name": "hAlign",
+          "attribute": "hAlign",
+          "description": "Snackbar horizontal alignment ['', left, center, left]\r\n(if empty sting the position will be \"free\")",
+          "type": "string",
+          "default": "\"left\""
+        },
+        {
+          "name": "title",
+          "attribute": "title",
+          "description": "Snackbar title (text)",
+          "type": "string",
+          "default": "\"\""
+        },
+        {
+          "name": "icon",
+          "attribute": "icon",
+          "description": "Icon name (for font icons)",
+          "type": "string",
+          "default": "\"\""
+        },
+        {
+          "name": "iconSrc",
+          "attribute": "iconSrc",
+          "description": "Icon src (for image icons)",
+          "type": "string",
+          "default": "\"\""
+        },
+        {
+          "name": "baseColor",
+          "attribute": "baseColor",
+          "description": "Base color (icon and text)",
+          "type": "string",
+          "default": "\"\""
+        },
+        {
+          "name": "closeButton",
+          "attribute": "closeButton",
+          "description": "Add close button to bar",
+          "type": "boolean",
+          "default": "false"
+        }
+      ],
+      "events": [
+        {
+          "name": "srui-close-snackbar",
+          "description": "Event triggered when user clicks close button\r\nEvent detail.origin informs about if close was originated by an overlay or a close button click"
+        }
+      ]
+    },
+    {
+      "name": "srui-navigation",
+      "path": "./src\\components\\navigation\\navigation.ts",
+      "description": "Navigation sidebar. On mobile it shows a close button that triggers a srui-close-nav event in order\r\nto control the mobile menu state",
+      "attributes": [
+        {
+          "name": "logoSrc",
+          "description": "Src for the top logo image",
+          "type": "string",
+          "default": "\"\""
+        },
+        {
+          "name": "title",
+          "description": "Title that goes under the logo image",
+          "type": "string",
+          "default": "\"\""
+        }
+      ],
+      "properties": [
+        {
+          "name": "logoSrc",
+          "attribute": "logoSrc",
+          "description": "Src for the top logo image",
+          "type": "string",
+          "default": "\"\""
+        },
+        {
+          "name": "title",
+          "attribute": "title",
+          "description": "Title that goes under the logo image",
+          "type": "string",
+          "default": "\"\""
+        }
+      ],
+      "events": [
+        {
+          "name": "srui-close-nav",
+          "description": "Event triggered when user clicks on the mobile close button"
+        }
+      ],
+      "slots": [
+        {
+          "name": "default",
+          "description": "The navigation content, eg: nav buttons."
+        }
+      ]
+    },
+    {
+      "name": "srui-page-header",
+      "path": "./src\\components\\page-header\\page-header.ts",
+      "description": "Standard Header for pages",
+      "attributes": [
+        {
+          "name": "section",
+          "description": "Section label or back link label (if backLink is true)",
+          "type": "string",
+          "default": "\"\""
+        },
+        {
+          "name": "title",
+          "description": "Page Title",
+          "type": "string",
+          "default": "\"\""
+        },
+        {
+          "name": "subtitle",
+          "description": "Page subtitle",
+          "type": "string",
+          "default": "\"\""
+        },
+        {
+          "name": "backLink",
+          "description": "If present, makes section a link to go back. Action can be taken using the srui-back-click event or\r\npassing a direct link using the attribute backLinkHref",
+          "type": "boolean",
+          "default": "false"
+        },
+        {
+          "name": "backLinkHref",
+          "description": "Link for the back link (if active)",
+          "type": "string",
+          "default": "\"javascript:void(0)\""
+        },
+        {
+          "name": "size",
+          "description": "Header size [default, small]",
+          "type": "string",
+          "default": "\"default\""
+        },
+        {
+          "name": "statusActive",
+          "description": "Active state status (if true hides subtitle)",
+          "type": "boolean",
+          "default": "false"
+        },
+        {
+          "name": "statusSuspended",
+          "description": "Suspended state status (if true hides subtitle)",
+          "type": "boolean",
+          "default": "false"
+        }
+      ],
+      "properties": [
+        {
+          "name": "section",
+          "attribute": "section",
+          "description": "Section label or back link label (if backLink is true)",
+          "type": "string",
+          "default": "\"\""
+        },
+        {
+          "name": "title",
+          "attribute": "title",
+          "description": "Page Title",
+          "type": "string",
+          "default": "\"\""
+        },
+        {
+          "name": "subtitle",
+          "attribute": "subtitle",
+          "description": "Page subtitle",
+          "type": "string",
+          "default": "\"\""
+        },
+        {
+          "name": "backLink",
+          "attribute": "backLink",
+          "description": "If present, makes section a link to go back. Action can be taken using the srui-back-click event or\r\npassing a direct link using the attribute backLinkHref",
+          "type": "boolean",
+          "default": "false"
+        },
+        {
+          "name": "backLinkHref",
+          "attribute": "backLinkHref",
+          "description": "Link for the back link (if active)",
+          "type": "string",
+          "default": "\"javascript:void(0)\""
+        },
+        {
+          "name": "size",
+          "attribute": "size",
+          "description": "Header size [default, small]",
+          "type": "string",
+          "default": "\"default\""
+        },
+        {
+          "name": "statusActive",
+          "attribute": "statusActive",
+          "description": "Active state status (if true hides subtitle)",
+          "type": "boolean",
+          "default": "false"
+        },
+        {
+          "name": "statusSuspended",
+          "attribute": "statusSuspended",
+          "description": "Suspended state status (if true hides subtitle)",
+          "type": "boolean",
+          "default": "false"
+        }
+      ],
+      "events": [
+        {
+          "name": "srui-back-click",
+          "description": "Back button clicked (if backLinkHref provided, event can be ingored)"
+        }
+      ]
+    },
+    {
+      "name": "srui-dialog-block",
+      "path": "./src\\components\\sbc\\block\\dialog-block\\dialog-block.ts",
+      "attributes": [
+        {
+          "name": "icon",
+          "description": "Icon name (for font icons)",
+          "type": "string",
+          "default": "\"\""
+        },
+        {
+          "name": "iconSrc",
+          "description": "Icon src (for image icons)",
+          "type": "string",
+          "default": "\"\""
+        },
+        {
+          "name": "iconColor",
+          "description": "Icon color",
+          "type": "string",
+          "default": "\"\""
+        },
+        {
+          "name": "title",
+          "description": "Block Title",
+          "type": "string",
+          "default": "\"\""
+        },
+        {
+          "name": "titleColor",
+          "description": "Title text color",
+          "type": "string",
+          "default": "\"dark-color\""
+        },
+        {
+          "name": "description",
+          "description": "Block Description",
+          "type": "string",
+          "default": "\"\""
+        },
+        {
+          "name": "descriptionColor",
+          "description": "Description text color",
+          "type": "string",
+          "default": "\"gray4-color\""
+        },
+        {
+          "name": "fullWidthButtons",
+          "description": "If true the button will have 100% with otherwise will adapt to text length",
+          "type": "boolean",
+          "default": "false"
+        },
+        {
+          "name": "buttonsRowDirection",
+          "description": "If true the buttons be align in a row instead column",
+          "type": "boolean",
+          "default": "false"
+        }
+      ],
+      "properties": [
+        {
+          "name": "icon",
+          "attribute": "icon",
+          "description": "Icon name (for font icons)",
+          "type": "string",
+          "default": "\"\""
+        },
+        {
+          "name": "iconSrc",
+          "attribute": "iconSrc",
+          "description": "Icon src (for image icons)",
+          "type": "string",
+          "default": "\"\""
+        },
+        {
+          "name": "iconColor",
+          "attribute": "iconColor",
+          "description": "Icon color",
+          "type": "string",
+          "default": "\"\""
+        },
+        {
+          "name": "title",
+          "attribute": "title",
+          "description": "Block Title",
+          "type": "string",
+          "default": "\"\""
+        },
+        {
+          "name": "titleColor",
+          "attribute": "titleColor",
+          "description": "Title text color",
+          "type": "string",
+          "default": "\"dark-color\""
+        },
+        {
+          "name": "description",
+          "attribute": "description",
+          "description": "Block Description",
+          "type": "string",
+          "default": "\"\""
+        },
+        {
+          "name": "descriptionColor",
+          "attribute": "descriptionColor",
+          "description": "Description text color",
+          "type": "string",
+          "default": "\"gray4-color\""
+        },
+        {
+          "name": "fullWidthButtons",
+          "attribute": "fullWidthButtons",
+          "description": "If true the button will have 100% with otherwise will adapt to text length",
+          "type": "boolean",
+          "default": "false"
+        },
+        {
+          "name": "buttonsRowDirection",
+          "attribute": "buttonsRowDirection",
+          "description": "If true the buttons be align in a row instead column",
+          "type": "boolean",
+          "default": "false"
+        }
+      ]
+    },
+    {
+      "name": "srui-extra-sims-block",
+      "path": "./src\\components\\sbc\\block\\extra-sims-block\\extra-sims-block.ts",
+      "attributes": [
+        {
+          "name": "title",
+          "description": "Block Title",
+          "type": "string",
+          "default": "\"\""
+        },
+        {
+          "name": "simsLength",
+          "description": "SIMs length",
+          "type": "Number",
+          "default": "0"
+        },
+        {
+          "name": "maxSims",
+          "description": "Max SIMs length",
+          "type": "Number",
+          "default": "5"
+        },
+        {
+          "name": "buttonVisible",
+          "description": "if true, the add option button will be visible",
+          "type": "boolean",
+          "default": "false"
+        },
+        {
+          "name": "open",
+          "description": "Expandable content internal state (this can't be used to control component state)",
+          "type": "boolean",
+          "default": "false"
+        }
+      ],
+      "properties": [
+        {
+          "name": "title",
+          "attribute": "title",
+          "description": "Block Title",
+          "type": "string",
+          "default": "\"\""
+        },
+        {
+          "name": "simsLength",
+          "attribute": "simsLength",
+          "description": "SIMs length",
+          "type": "Number",
+          "default": "0"
+        },
+        {
+          "name": "maxSims",
+          "attribute": "maxSims",
+          "description": "Max SIMs length",
+          "type": "Number",
+          "default": "5"
+        },
+        {
+          "name": "buttonVisible",
+          "attribute": "buttonVisible",
+          "description": "if true, the add option button will be visible",
+          "type": "boolean",
+          "default": "false"
+        },
+        {
+          "name": "open",
+          "attribute": "open",
+          "description": "Expandable content internal state (this can't be used to control component state)",
+          "type": "boolean",
+          "default": "false"
+        }
+      ],
+      "events": [
+        {
+          "name": "srui-extra-sims-block-toggle",
+          "description": "Event triggered when user toggles box"
+        }
+      ],
+      "slots": [
+        {
+          "name": "button_area",
+          "description": "Slot to add a button (or similar) which will provide actions for this option"
+        }
+      ]
+    },
+    {
+      "name": "srui-header-block-slotted",
+      "path": "./src\\components\\sbc\\block\\header-block-slotted\\header-block-slotted.ts",
+      "attributes": [
+        {
+          "name": "title",
+          "description": "Block Title",
+          "type": "string",
+          "default": "\"\""
+        }
+      ],
+      "properties": [
+        {
+          "name": "title",
+          "attribute": "title",
+          "description": "Block Title",
+          "type": "string",
+          "default": "\"\""
+        }
+      ]
+    },
+    {
+      "name": "srui-header-block",
+      "path": "./src\\components\\sbc\\block\\header-block\\header-block.ts",
+      "attributes": [
+        {
+          "name": "title",
+          "description": "Block Title",
+          "type": "string",
+          "default": "\"\""
+        },
+        {
+          "name": "backLink",
+          "description": "If present, makes section a link to go back. Action can be taken using the srui-back-click event or\r\npassing a direct link using the attribute backLinkHref",
+          "type": "boolean",
+          "default": "true"
+        },
+        {
+          "name": "backLinkHref",
+          "description": "Link for the back link (if active)",
+          "type": "string",
+          "default": "\"javascript:void(0)\""
+        },
+        {
+          "name": "isShownCloseButton",
+          "description": "Show/hide close button",
+          "type": "boolean",
+          "default": "false"
+        }
+      ],
+      "properties": [
+        {
+          "name": "title",
+          "attribute": "title",
+          "description": "Block Title",
+          "type": "string",
+          "default": "\"\""
+        },
+        {
+          "name": "backLink",
+          "attribute": "backLink",
+          "description": "If present, makes section a link to go back. Action can be taken using the srui-back-click event or\r\npassing a direct link using the attribute backLinkHref",
+          "type": "boolean",
+          "default": "true"
+        },
+        {
+          "name": "backLinkHref",
+          "attribute": "backLinkHref",
+          "description": "Link for the back link (if active)",
+          "type": "string",
+          "default": "\"javascript:void(0)\""
+        },
+        {
+          "name": "isShownCloseButton",
+          "attribute": "isShownCloseButton",
+          "description": "Show/hide close button",
+          "type": "boolean",
+          "default": "false"
+        }
+      ],
+      "events": [
+        {
+          "name": "srui-header-back",
+          "description": "Event triggered when user clicks on back button"
+        },
+        {
+          "name": "srui-close-header",
+          "description": "Event triggered when user clicks on close button"
+        }
+      ]
+    },
+    {
+      "name": "srui-language-selector",
+      "path": "./src\\components\\sbc\\block\\language-selector\\language-selector.ts",
+      "attributes": [
+        {
+          "name": "currentLanguage",
+          "description": "Current Language",
+          "type": "string",
+          "default": "\"\""
+        },
+        {
+          "name": "whiteBackground",
+          "description": "Main background Color",
+          "type": "boolean",
+          "default": "false"
+        },
+        {
+          "name": "mainAlignment",
+          "description": "Main alignment",
+          "type": "string",
+          "default": "\"center\""
+        },
+        {
+          "name": "languages",
+          "description": "languages Selection",
+          "default": "[]"
+        },
+        {
+          "name": "open",
+          "description": "Open state of the language selection (this can't be used to control component state)",
+          "type": "boolean",
+          "default": "false"
+        }
+      ],
+      "properties": [
+        {
+          "name": "currentLanguage",
+          "attribute": "currentLanguage",
+          "description": "Current Language",
+          "type": "string",
+          "default": "\"\""
+        },
+        {
+          "name": "whiteBackground",
+          "attribute": "whiteBackground",
+          "description": "Main background Color",
+          "type": "boolean",
+          "default": "false"
+        },
+        {
+          "name": "mainAlignment",
+          "attribute": "mainAlignment",
+          "description": "Main alignment",
+          "type": "string",
+          "default": "\"center\""
+        },
+        {
+          "name": "languages",
+          "attribute": "languages",
+          "description": "languages Selection",
+          "default": "[]"
+        },
+        {
+          "name": "open",
+          "attribute": "open",
+          "description": "Open state of the language selection (this can't be used to control component state)",
+          "type": "boolean",
+          "default": "false"
+        },
+        {
+          "name": "languageSelectionHandler",
+          "type": "(evt: Event, lang: String) => void",
+          "default": "\"(evt: Event, lang: String): void => {\\r\\n    /**\\r\\n     * Event triggered when language is selected\\r\\n     * lang retrieves the selected language\\r\\n     * @event srui-language-selection\\r\\n     */\\r\\n    this.dispatchEvent(new CustomEvent('srui-language-selection', {\\r\\n      composed: true,\\r\\n      bubbles: true,\\r\\n      detail: {\\r\\n        event: evt,\\r\\n        lang: lang\\r\\n      }\\r\\n    }));\\r\\n  }\""
+        },
+        {
+          "name": "closeSelectorHandler",
+          "type": "(e: any) => void",
+          "default": "\"(e: any): void => {\\r\\n    if (!e['srcElement'].classList.value.includes('current-language-button')) {\\r\\n      if (this.open) {\\r\\n        this.open = false;\\r\\n      }\\r\\n    }\\r\\n    /**\\r\\n     * Event triggered to close the selector\\r\\n     * lang retrieves the selected language\\r\\n     * @event srui-close-language-selection\\r\\n     */\\r\\n    this.dispatchEvent(new CustomEvent('srui-close-language-selection', {\\r\\n      composed: true,\\r\\n      bubbles: true,\\r\\n      detail: {\\r\\n        event: e\\r\\n      }\\r\\n    }));\\r\\n  }\""
+        }
+      ],
+      "events": [
+        {
+          "name": "srui-language-selector-toggle",
+          "description": "Event triggered when user toggles language selector"
+        },
+        {
+          "name": "srui-language-selection",
+          "description": "Event triggered when language is selected\r\nlang retrieves the selected language"
+        },
+        {
+          "name": "srui-close-language-selection",
+          "description": "Event triggered to close the selector\r\nlang retrieves the selected language"
+        }
+      ]
+    },
+    {
+      "name": "srui-menu-block",
+      "path": "./src\\components\\sbc\\block\\menu-block\\menu-block.ts",
+      "attributes": [
+        {
+          "name": "menuData",
+          "description": "Device Info",
+          "default": "[]"
+        }
+      ],
+      "properties": [
+        {
+          "name": "menuData",
+          "attribute": "menuData",
+          "description": "Device Info",
+          "default": "[]"
+        }
+      ]
+    },
+    {
+      "name": "srui-options-details-block",
+      "path": "./src\\components\\sbc\\block\\options-details-block\\options-details-block.ts",
+      "attributes": [
+        {
+          "name": "title",
+          "description": "Block Title",
+          "type": "string",
+          "default": "\"\""
+        },
+        {
+          "name": "subTitle",
+          "description": "Block Subtitle",
+          "type": "string",
+          "default": "\"\""
+        },
+        {
+          "name": "buttonVisible",
+          "description": "if true, the add option button will be visible",
+          "type": "boolean",
+          "default": "false"
+        },
+        {
+          "name": "open",
+          "description": "Expandable content internal state (this can't be used to control component state)",
+          "type": "boolean",
+          "default": "false"
+        }
+      ],
+      "properties": [
+        {
+          "name": "title",
+          "attribute": "title",
+          "description": "Block Title",
+          "type": "string",
+          "default": "\"\""
+        },
+        {
+          "name": "subTitle",
+          "attribute": "subTitle",
+          "description": "Block Subtitle",
+          "type": "string",
+          "default": "\"\""
+        },
+        {
+          "name": "buttonVisible",
+          "attribute": "buttonVisible",
+          "description": "if true, the add option button will be visible",
+          "type": "boolean",
+          "default": "false"
+        },
+        {
+          "name": "open",
+          "attribute": "open",
+          "description": "Expandable content internal state (this can't be used to control component state)",
+          "type": "boolean",
+          "default": "false"
+        }
+      ],
+      "slots": [
+        {
+          "name": "button_area",
+          "description": "Slot to add a button (or similar) which will provide actions for this option"
+        }
+      ]
+    },
+    {
+      "name": "srui-registered-credit-card-block",
+      "path": "./src\\components\\sbc\\block\\registered-credit-card-block\\registered-credit-card-block.ts",
+      "attributes": [
+        {
+          "name": "name",
+          "description": "Costumer full name",
+          "type": "string",
+          "default": "\"\""
+        },
+        {
+          "name": "ccNumber",
+          "description": "Credit card number",
+          "type": "string",
+          "default": "\"\""
+        },
+        {
+          "name": "ccExpDateLabel",
+          "description": "Credit card Expiration Date",
+          "type": "string",
+          "default": "\"\""
+        },
+        {
+          "name": "ccExpDate",
+          "description": "Credit card Expiration Date",
+          "type": "string",
+          "default": "\"\""
+        },
+        {
+          "name": "ccCVVLabel",
+          "description": "Credit card CVV label",
+          "type": "string",
+          "default": "\"\""
+        },
+        {
+          "name": "ccCVV",
+          "description": "Credit card CVV",
+          "type": "string",
+          "default": "\"\""
+        },
+        {
+          "name": "statusIcon",
+          "description": "Status Icon name (for font icons)",
+          "type": "string",
+          "default": "\"\""
+        },
+        {
+          "name": "statusIconSrc",
+          "description": "Status Icon src (for image icons)",
+          "type": "string",
+          "default": "\"\""
+        },
+        {
+          "name": "statusIconColor",
+          "description": "Status Icon color",
+          "type": "string",
+          "default": "\"gray2-color\""
+        },
+        {
+          "name": "statusText",
+          "description": "Status information",
+          "type": "string",
+          "default": "\"\""
+        },
+        {
+          "name": "statusTextColor",
+          "description": "Status information text color",
+          "type": "string",
+          "default": "\"\""
+        },
+        {
+          "name": "extraInfo",
+          "description": "extra information relative to credit card",
+          "type": "string",
+          "default": "\"\""
+        }
+      ],
+      "properties": [
+        {
+          "name": "name",
+          "attribute": "name",
+          "description": "Costumer full name",
+          "type": "string",
+          "default": "\"\""
+        },
+        {
+          "name": "ccNumber",
+          "attribute": "ccNumber",
+          "description": "Credit card number",
+          "type": "string",
+          "default": "\"\""
+        },
+        {
+          "name": "ccExpDateLabel",
+          "attribute": "ccExpDateLabel",
+          "description": "Credit card Expiration Date",
+          "type": "string",
+          "default": "\"\""
+        },
+        {
+          "name": "ccExpDate",
+          "attribute": "ccExpDate",
+          "description": "Credit card Expiration Date",
+          "type": "string",
+          "default": "\"\""
+        },
+        {
+          "name": "ccCVVLabel",
+          "attribute": "ccCVVLabel",
+          "description": "Credit card CVV label",
+          "type": "string",
+          "default": "\"\""
+        },
+        {
+          "name": "ccCVV",
+          "attribute": "ccCVV",
+          "description": "Credit card CVV",
+          "type": "string",
+          "default": "\"\""
+        },
+        {
+          "name": "statusIcon",
+          "attribute": "statusIcon",
+          "description": "Status Icon name (for font icons)",
+          "type": "string",
+          "default": "\"\""
+        },
+        {
+          "name": "statusIconSrc",
+          "attribute": "statusIconSrc",
+          "description": "Status Icon src (for image icons)",
+          "type": "string",
+          "default": "\"\""
+        },
+        {
+          "name": "statusIconColor",
+          "attribute": "statusIconColor",
+          "description": "Status Icon color",
+          "type": "string",
+          "default": "\"gray2-color\""
+        },
+        {
+          "name": "statusText",
+          "attribute": "statusText",
+          "description": "Status information",
+          "type": "string",
+          "default": "\"\""
+        },
+        {
+          "name": "statusTextColor",
+          "attribute": "statusTextColor",
+          "description": "Status information text color",
+          "type": "string",
+          "default": "\"\""
+        },
+        {
+          "name": "extraInfo",
+          "attribute": "extraInfo",
+          "description": "extra information relative to credit card",
+          "type": "string",
+          "default": "\"\""
+        }
+      ],
+      "slots": [
+        {
+          "name": "button_area",
+          "description": "Slot to add a button (or similar) which will provide actions for this option"
+        }
+      ]
+    },
+    {
+      "name": "srui-select-service-block",
+      "path": "./src\\components\\sbc\\block\\select-service-block\\select-service-block.ts",
+      "attributes": [
+        {
+          "name": "title",
+          "description": "Block Title",
+          "type": "string",
+          "default": "\"\""
+        },
+        {
+          "name": "description",
+          "description": "Block Description",
+          "type": "string",
+          "default": "\"\""
+        },
+        {
+          "name": "subTitle",
+          "description": "Block Sub title",
+          "type": "string",
+          "default": "\"\""
+        }
+      ],
+      "properties": [
+        {
+          "name": "title",
+          "attribute": "title",
+          "description": "Block Title",
+          "type": "string",
+          "default": "\"\""
+        },
+        {
+          "name": "description",
+          "attribute": "description",
+          "description": "Block Description",
+          "type": "string",
+          "default": "\"\""
+        },
+        {
+          "name": "subTitle",
+          "attribute": "subTitle",
+          "description": "Block Sub title",
+          "type": "string",
+          "default": "\"\""
+        }
+      ],
+      "events": [
+        {
+          "name": "srui-select-service-back",
+          "description": "Event triggered when user clicks on back button"
+        },
+        {
+          "name": "srui-close-select-service",
+          "description": "Event triggered when user clicks on close button"
+        }
+      ],
+      "slots": [
+        {
+          "name": "content",
+          "description": "Slot to add all content for this block"
+        }
+      ]
+    },
+    {
+      "name": "srui-sim-details",
+      "path": "./src\\components\\sbc\\block\\sim-details-block\\sim-details-block.ts",
+      "attributes": [
+        {
+          "name": "simNumberLabel",
+          "description": "Sim Number Label",
+          "type": "string",
+          "default": "\"SIM card number\""
+        },
+        {
+          "name": "simNumber",
+          "description": "Sim Number",
+          "type": "string",
+          "default": "\"\""
+        },
+        {
+          "name": "simStatusLabel",
+          "description": "Sim Status Label",
+          "type": "string",
+          "default": "\"SIM status\""
+        },
+        {
+          "name": "simStatus",
+          "description": "Sim Status",
+          "type": "string",
+          "default": "\"\""
+        },
+        {
+          "name": "simStatusIcon",
+          "description": "Sim Status Icon",
+          "type": "string",
+          "default": "\"\""
+        },
+        {
+          "name": "simFormatLabel",
+          "description": "Sim Format Label",
+          "type": "string",
+          "default": "\"SIM format\""
+        },
+        {
+          "name": "simFormat",
+          "description": "Sim Format",
+          "type": "string",
+          "default": "\"\""
+        },
+        {
+          "name": "pukLabel",
+          "description": "PUK Label",
+          "type": "string",
+          "default": "\"\""
+        },
+        {
+          "name": "puk",
+          "description": "PUK",
+          "type": "string",
+          "default": "\"\""
+        },
+        {
+          "name": "pinLabel",
+          "description": "PIN Label",
+          "type": "string",
+          "default": "\"\""
+        },
+        {
+          "name": "pin",
+          "description": "PIN",
+          "type": "string",
+          "default": "\"\""
+        }
+      ],
+      "properties": [
+        {
+          "name": "simNumberLabel",
+          "attribute": "simNumberLabel",
+          "description": "Sim Number Label",
+          "type": "string",
+          "default": "\"SIM card number\""
+        },
+        {
+          "name": "simNumber",
+          "attribute": "simNumber",
+          "description": "Sim Number",
+          "type": "string",
+          "default": "\"\""
+        },
+        {
+          "name": "simStatusLabel",
+          "attribute": "simStatusLabel",
+          "description": "Sim Status Label",
+          "type": "string",
+          "default": "\"SIM status\""
+        },
+        {
+          "name": "simStatus",
+          "attribute": "simStatus",
+          "description": "Sim Status",
+          "type": "string",
+          "default": "\"\""
+        },
+        {
+          "name": "simStatusIcon",
+          "attribute": "simStatusIcon",
+          "description": "Sim Status Icon",
+          "type": "string",
+          "default": "\"\""
+        },
+        {
+          "name": "simFormatLabel",
+          "attribute": "simFormatLabel",
+          "description": "Sim Format Label",
+          "type": "string",
+          "default": "\"SIM format\""
+        },
+        {
+          "name": "simFormat",
+          "attribute": "simFormat",
+          "description": "Sim Format",
+          "type": "string",
+          "default": "\"\""
+        },
+        {
+          "name": "pukLabel",
+          "attribute": "pukLabel",
+          "description": "PUK Label",
+          "type": "string",
+          "default": "\"\""
+        },
+        {
+          "name": "puk",
+          "attribute": "puk",
+          "description": "PUK",
+          "type": "string",
+          "default": "\"\""
+        },
+        {
+          "name": "pinLabel",
+          "attribute": "pinLabel",
+          "description": "PIN Label",
+          "type": "string",
+          "default": "\"\""
+        },
+        {
+          "name": "pin",
+          "attribute": "pin",
+          "description": "PIN",
+          "type": "string",
+          "default": "\"\""
+        }
+      ]
+    },
+    {
+      "name": "srui-subscriber-block",
+      "path": "./src\\components\\sbc\\block\\subscriber-block\\subscriber-block.ts",
+      "attributes": [
+        {
+          "name": "name",
+          "description": "Subscriber name",
+          "type": "string",
+          "default": "\"\""
+        },
+        {
+          "name": "subscription",
+          "description": "Subscriber subscription",
+          "type": "string",
+          "default": "\"\""
+        },
+        {
+          "name": "large",
+          "description": "Large text size.",
+          "type": "boolean",
+          "default": "false"
+        }
+      ],
+      "properties": [
+        {
+          "name": "name",
+          "attribute": "name",
+          "description": "Subscriber name",
+          "type": "string",
+          "default": "\"\""
+        },
+        {
+          "name": "subscription",
+          "attribute": "subscription",
+          "description": "Subscriber subscription",
+          "type": "string",
+          "default": "\"\""
+        },
+        {
+          "name": "large",
+          "attribute": "large",
+          "description": "Large text size.",
+          "type": "boolean",
+          "default": "false"
+        }
+      ]
+    },
+    {
+      "name": "srui-subscription-credit-buckets",
+      "path": "./src\\components\\sbc\\block\\subscription-credit-buckets-block\\subscription-credit-buckets.ts",
+      "attributes": [
+        {
+          "name": "title",
+          "description": "Block Title",
+          "type": "string",
+          "default": "\"\""
+        },
+        {
+          "name": "planLabel",
+          "description": "Rate plan label",
+          "type": "string",
+          "default": "\"\""
+        },
+        {
+          "name": "note",
+          "description": "Additional Note",
+          "type": "string",
+          "default": "\"\""
+        }
+      ],
+      "properties": [
+        {
+          "name": "title",
+          "attribute": "title",
+          "description": "Block Title",
+          "type": "string",
+          "default": "\"\""
+        },
+        {
+          "name": "planLabel",
+          "attribute": "planLabel",
+          "description": "Rate plan label",
+          "type": "string",
+          "default": "\"\""
+        },
+        {
+          "name": "note",
+          "attribute": "note",
+          "description": "Additional Note",
+          "type": "string",
+          "default": "\"\""
+        }
+      ],
+      "slots": [
+        {
+          "name": "credit_buckets",
+          "description": "Slot to add all Credit buckets elements"
+        }
+      ]
+    },
+    {
+      "name": "srui-bucket-item",
+      "path": "./src\\components\\sbc\\cards\\bucket-item\\bucket-item.ts",
+      "attributes": [
+        {
+          "name": "icon",
+          "description": "Icon name (for font icons)",
+          "type": "string",
+          "default": "\"\""
+        },
+        {
+          "name": "iconSrc",
+          "description": "Icon src (for image icons)",
+          "type": "string",
+          "default": "\"\""
+        },
+        {
+          "name": "type",
+          "description": "Bucket item type",
+          "type": "string",
+          "default": "\"\""
+        },
+        {
+          "name": "description",
+          "description": "Bucket item description",
+          "type": "string",
+          "default": "\"\""
+        }
+      ],
+      "properties": [
+        {
+          "name": "icon",
+          "attribute": "icon",
+          "description": "Icon name (for font icons)",
+          "type": "string",
+          "default": "\"\""
+        },
+        {
+          "name": "iconSrc",
+          "attribute": "iconSrc",
+          "description": "Icon src (for image icons)",
+          "type": "string",
+          "default": "\"\""
+        },
+        {
+          "name": "type",
+          "attribute": "type",
+          "description": "Bucket item type",
+          "type": "string",
+          "default": "\"\""
+        },
+        {
+          "name": "description",
+          "attribute": "description",
+          "description": "Bucket item description",
+          "type": "string",
+          "default": "\"\""
+        }
+      ]
+    },
+    {
+      "name": "srui-device-order",
+      "path": "./src\\components\\sbc\\cards\\device-order\\device-order.ts",
+      "attributes": [
+        {
+          "name": "hideHeader",
+          "description": "If true the status header will be hide",
+          "type": "boolean",
+          "default": "false"
+        },
+        {
+          "name": "headerTitle",
+          "description": "Box Title",
+          "type": "string",
+          "default": "\"\""
+        },
+        {
+          "name": "deviceTitle",
+          "description": "Device label",
+          "type": "string",
+          "default": "\"\""
+        },
+        {
+          "name": "deviceInfo",
+          "description": "Device Info",
+          "default": "[]"
+        },
+        {
+          "name": "hideButton",
+          "description": "If true the button will be hide",
+          "type": "boolean",
+          "default": "false"
+        }
+      ],
+      "properties": [
+        {
+          "name": "hideHeader",
+          "attribute": "hideHeader",
+          "description": "If true the status header will be hide",
+          "type": "boolean",
+          "default": "false"
+        },
+        {
+          "name": "headerTitle",
+          "attribute": "headerTitle",
+          "description": "Box Title",
+          "type": "string",
+          "default": "\"\""
+        },
+        {
+          "name": "deviceTitle",
+          "attribute": "deviceTitle",
+          "description": "Device label",
+          "type": "string",
+          "default": "\"\""
+        },
+        {
+          "name": "deviceInfo",
+          "attribute": "deviceInfo",
+          "description": "Device Info",
+          "default": "[]"
+        },
+        {
+          "name": "hideButton",
+          "attribute": "hideButton",
+          "description": "If true the button will be hide",
+          "type": "boolean",
+          "default": "false"
+        }
+      ],
+      "slots": [
+        {
+          "name": "button_area",
+          "description": "Slot to add a button (or similar) which will provide actions for this option"
+        }
+      ]
+    },
+    {
+      "name": "srui-device-use",
+      "path": "./src\\components\\sbc\\cards\\device-use\\device-use.ts",
+      "attributes": [
+        {
+          "name": "title",
+          "description": "Component Title",
+          "type": "string",
+          "default": "\"\""
+        },
+        {
+          "name": "device",
+          "description": "Device label",
+          "type": "string",
+          "default": "\"\""
+        },
+        {
+          "name": "note",
+          "description": "possible extra info",
+          "type": "string",
+          "default": "\"\""
+        }
+      ],
+      "properties": [
+        {
+          "name": "title",
+          "attribute": "title",
+          "description": "Component Title",
+          "type": "string",
+          "default": "\"\""
+        },
+        {
+          "name": "device",
+          "attribute": "device",
+          "description": "Device label",
+          "type": "string",
+          "default": "\"\""
+        },
+        {
+          "name": "note",
+          "attribute": "note",
+          "description": "possible extra info",
+          "type": "string",
+          "default": "\"\""
+        }
+      ],
+      "slots": [
+        {
+          "name": "thumb",
+          "description": "Slot to add a device image"
+        }
+      ]
+    },
+    {
+      "name": "srui-extra-sim-card",
+      "path": "./src\\components\\sbc\\cards\\extra-sim-card\\extra-sim-card.ts",
+      "attributes": [
+        {
+          "name": "title",
+          "description": "Card Title",
+          "type": "string",
+          "default": "\"\""
+        },
+        {
+          "name": "description",
+          "description": "Card description",
+          "type": "string",
+          "default": "\"\""
+        },
+        {
+          "name": "state",
+          "description": "Extra SIM state",
+          "type": "string",
+          "default": "\"\""
+        },
+        {
+          "name": "stateColor",
+          "description": "Color for label info",
+          "type": "string",
+          "default": "\"valid-color\""
+        },
+        {
+          "name": "thumb",
+          "description": "Device thumb",
+          "type": "string",
+          "default": "\"\""
+        },
+        {
+          "name": "last",
+          "description": "Removes bottom separator",
+          "type": "boolean",
+          "default": "false"
+        }
+      ],
+      "properties": [
+        {
+          "name": "title",
+          "attribute": "title",
+          "description": "Card Title",
+          "type": "string",
+          "default": "\"\""
+        },
+        {
+          "name": "description",
+          "attribute": "description",
+          "description": "Card description",
+          "type": "string",
+          "default": "\"\""
+        },
+        {
+          "name": "state",
+          "attribute": "state",
+          "description": "Extra SIM state",
+          "type": "string",
+          "default": "\"\""
+        },
+        {
+          "name": "stateColor",
+          "attribute": "stateColor",
+          "description": "Color for label info",
+          "type": "string",
+          "default": "\"valid-color\""
+        },
+        {
+          "name": "thumb",
+          "attribute": "thumb",
+          "description": "Device thumb",
+          "type": "string",
+          "default": "\"\""
+        },
+        {
+          "name": "last",
+          "attribute": "last",
+          "description": "Removes bottom separator",
+          "type": "boolean",
+          "default": "false"
+        }
+      ],
+      "slots": [
+        {
+          "name": "more_button",
+          "description": "Slot to add a more button (or similar) which will provide actions for this option"
+        }
+      ]
+    },
+    {
+      "name": "srui-extra-sim-option-card",
+      "path": "./src\\components\\sbc\\cards\\extra-sim-option-card\\extra-sim-option-card.ts",
+      "attributes": [
+        {
+          "name": "title",
+          "description": "Card Title",
+          "type": "string",
+          "default": "\"\""
+        },
+        {
+          "name": "subTitle",
+          "description": "Card sub title",
+          "type": "string",
+          "default": "\"\""
+        },
+        {
+          "name": "description",
+          "description": "Card description",
+          "type": "string",
+          "default": "\"\""
+        },
+        {
+          "name": "price",
+          "description": "Card price",
+          "type": "string",
+          "default": "\"\""
+        }
+      ],
+      "properties": [
+        {
+          "name": "title",
+          "attribute": "title",
+          "description": "Card Title",
+          "type": "string",
+          "default": "\"\""
+        },
+        {
+          "name": "subTitle",
+          "attribute": "subTitle",
+          "description": "Card sub title",
+          "type": "string",
+          "default": "\"\""
+        },
+        {
+          "name": "description",
+          "attribute": "description",
+          "description": "Card description",
+          "type": "string",
+          "default": "\"\""
+        },
+        {
+          "name": "price",
+          "attribute": "price",
+          "description": "Card price",
+          "type": "string",
+          "default": "\"\""
+        }
+      ],
+      "events": [
+        {
+          "name": "srui-cta-click",
+          "description": "Event triggered when call to action is clicked"
+        }
+      ],
+      "slots": [
+        {
+          "name": "button_area",
+          "description": "Slot to add a button (or similar) which will provide actions for this option"
+        }
+      ]
+    },
+    {
+      "name": "srui-menu-group",
+      "path": "./src\\components\\sbc\\cards\\menu-group\\menu-group.ts",
+      "attributes": [
+        {
+          "name": "label",
+          "description": "Group label",
+          "type": "string",
+          "default": "\"\""
+        },
+        {
+          "name": "hasSubItems",
+          "description": "if true this element will have sub items (sub navigation) with a collapsible behaviour",
+          "type": "boolean",
+          "default": "false"
+        },
+        {
+          "name": "open",
+          "description": "Expandable content internal state (this can't be used to control component state)",
+          "type": "boolean",
+          "default": "false"
+        }
+      ],
+      "properties": [
+        {
+          "name": "label",
+          "attribute": "label",
+          "description": "Group label",
+          "type": "string",
+          "default": "\"\""
+        },
+        {
+          "name": "hasSubItems",
+          "attribute": "hasSubItems",
+          "description": "if true this element will have sub items (sub navigation) with a collapsible behaviour",
+          "type": "boolean",
+          "default": "false"
+        },
+        {
+          "name": "open",
+          "attribute": "open",
+          "description": "Expandable content internal state (this can't be used to control component state)",
+          "type": "boolean",
+          "default": "false"
+        }
+      ]
+    },
+    {
+      "name": "srui-menu-item",
+      "path": "./src\\components\\sbc\\cards\\menu-item\\menu-item.ts",
+      "attributes": [
+        {
+          "name": "icon",
+          "description": "Icon name (for font icons)",
+          "type": "string",
+          "default": "\"\""
+        },
+        {
+          "name": "iconSrc",
+          "description": "Icon src (for image icons)",
+          "type": "string",
+          "default": "\"\""
+        },
+        {
+          "name": "label",
+          "description": "Item label",
+          "type": "string",
+          "default": "\"\""
+        }
+      ],
+      "properties": [
+        {
+          "name": "icon",
+          "attribute": "icon",
+          "description": "Icon name (for font icons)",
+          "type": "string",
+          "default": "\"\""
+        },
+        {
+          "name": "iconSrc",
+          "attribute": "iconSrc",
+          "description": "Icon src (for image icons)",
+          "type": "string",
+          "default": "\"\""
+        },
+        {
+          "name": "label",
+          "attribute": "label",
+          "description": "Item label",
+          "type": "string",
+          "default": "\"\""
+        }
+      ]
+    },
+    {
+      "name": "srui-missing-credit-card",
+      "path": "./src\\components\\sbc\\cards\\missing-credit-card\\missing-credit-card.ts",
+      "attributes": [
+        {
+          "name": "title",
+          "description": "Box Title",
+          "type": "string",
+          "default": "\"\""
+        },
+        {
+          "name": "description",
+          "description": "Box description",
+          "type": "string",
+          "default": "\"\""
+        },
+        {
+          "name": "hideButton",
+          "description": "If true the button will be hide",
+          "type": "boolean",
+          "default": "false"
+        }
+      ],
+      "properties": [
+        {
+          "name": "title",
+          "attribute": "title",
+          "description": "Box Title",
+          "type": "string",
+          "default": "\"\""
+        },
+        {
+          "name": "description",
+          "attribute": "description",
+          "description": "Box description",
+          "type": "string",
+          "default": "\"\""
+        },
+        {
+          "name": "hideButton",
+          "attribute": "hideButton",
+          "description": "If true the button will be hide",
+          "type": "boolean",
+          "default": "false"
+        }
+      ],
+      "slots": [
+        {
+          "name": "button_area",
+          "description": "Slot to add a button (or similar) which will provide actions for this option"
+        }
+      ]
+    },
+    {
+      "name": "srui-option-box",
+      "path": "./src\\components\\sbc\\cards\\option-box\\option-box.ts",
+      "attributes": [
+        {
+          "name": "hideHeader",
+          "description": "If true the status header will be hide",
+          "type": "boolean",
+          "default": "false"
+        },
+        {
+          "name": "headerTitle",
+          "description": "Box Header Title",
+          "type": "string",
+          "default": "\"\""
+        },
+        {
+          "name": "title",
+          "description": "Box Title",
+          "type": "string",
+          "default": "\"\""
+        },
+        {
+          "name": "hideDetailButton",
+          "description": "If true the detail button will be hide",
+          "type": "boolean",
+          "default": "false"
+        },
+        {
+          "name": "description",
+          "description": "Box description",
+          "type": "string",
+          "default": "\"\""
+        },
+        {
+          "name": "hideBucketList",
+          "description": "If true the detail button will be hide",
+          "type": "boolean",
+          "default": "false"
+        },
+        {
+          "name": "paymentTypeLabel",
+          "description": "Payment Type label",
+          "type": "string",
+          "default": "\"\""
+        },
+        {
+          "name": "price",
+          "description": "Price",
+          "type": "string",
+          "default": "\"\""
+        },
+        {
+          "name": "nextPaymentLabel",
+          "description": "Label for next payment",
+          "type": "string",
+          "default": "\"\""
+        },
+        {
+          "name": "nextPayment",
+          "description": "Next payment date",
+          "type": "string",
+          "default": "\"\""
+        },
+        {
+          "name": "hideButton",
+          "description": "If true the button will be hide",
+          "type": "boolean",
+          "default": "false"
+        }
+      ],
+      "properties": [
+        {
+          "name": "hideHeader",
+          "attribute": "hideHeader",
+          "description": "If true the status header will be hide",
+          "type": "boolean",
+          "default": "false"
+        },
+        {
+          "name": "headerTitle",
+          "attribute": "headerTitle",
+          "description": "Box Header Title",
+          "type": "string",
+          "default": "\"\""
+        },
+        {
+          "name": "title",
+          "attribute": "title",
+          "description": "Box Title",
+          "type": "string",
+          "default": "\"\""
+        },
+        {
+          "name": "hideDetailButton",
+          "attribute": "hideDetailButton",
+          "description": "If true the detail button will be hide",
+          "type": "boolean",
+          "default": "false"
+        },
+        {
+          "name": "description",
+          "attribute": "description",
+          "description": "Box description",
+          "type": "string",
+          "default": "\"\""
+        },
+        {
+          "name": "hideBucketList",
+          "attribute": "hideBucketList",
+          "description": "If true the detail button will be hide",
+          "type": "boolean",
+          "default": "false"
+        },
+        {
+          "name": "paymentTypeLabel",
+          "attribute": "paymentTypeLabel",
+          "description": "Payment Type label",
+          "type": "string",
+          "default": "\"\""
+        },
+        {
+          "name": "price",
+          "attribute": "price",
+          "description": "Price",
+          "type": "string",
+          "default": "\"\""
+        },
+        {
+          "name": "nextPaymentLabel",
+          "attribute": "nextPaymentLabel",
+          "description": "Label for next payment",
+          "type": "string",
+          "default": "\"\""
+        },
+        {
+          "name": "nextPayment",
+          "attribute": "nextPayment",
+          "description": "Next payment date",
+          "type": "string",
+          "default": "\"\""
+        },
+        {
+          "name": "hideButton",
+          "attribute": "hideButton",
+          "description": "If true the button will be hide",
+          "type": "boolean",
+          "default": "false"
+        }
+      ],
+      "slots": [
+        {
+          "name": "button_area",
+          "description": "Slot to add a button (or similar) which will provide actions for this option"
+        }
+      ]
+    },
+    {
+      "name": "srui-selection-box",
+      "path": "./src\\components\\sbc\\cards\\selection-box\\selection-box.ts",
+      "attributes": [
+        {
+          "name": "title",
+          "description": "Box Title",
+          "type": "string",
+          "default": "\"\""
+        },
+        {
+          "name": "description",
+          "description": "Box description",
+          "type": "string",
+          "default": "\"\""
+        },
+        {
+          "name": "hideButton",
+          "description": "If true the button will be hide",
+          "type": "boolean",
+          "default": "false"
+        }
+      ],
+      "properties": [
+        {
+          "name": "title",
+          "attribute": "title",
+          "description": "Box Title",
+          "type": "string",
+          "default": "\"\""
+        },
+        {
+          "name": "description",
+          "attribute": "description",
+          "description": "Box description",
+          "type": "string",
+          "default": "\"\""
+        },
+        {
+          "name": "hideButton",
+          "attribute": "hideButton",
+          "description": "If true the button will be hide",
+          "type": "boolean",
+          "default": "false"
+        }
+      ],
+      "slots": [
+        {
+          "name": "button_area",
+          "description": "Slot to add a button (or similar) which will provide actions for this option"
+        }
+      ]
+    },
+    {
+      "name": "srui-subscription-bucket-credit",
+      "path": "./src\\components\\sbc\\cards\\subscription-bucket-credit\\subscription-bucket-credit.ts",
+      "attributes": [
+        {
+          "name": "type",
+          "description": "bucket credit type",
+          "type": "string",
+          "default": "\"\""
+        },
+        {
+          "name": "title",
+          "description": "bucket credit Title",
+          "type": "string",
+          "default": "\"\""
+        },
+        {
+          "name": "description",
+          "description": "bucket credit description",
+          "type": "string",
+          "default": "\"\""
+        }
+      ],
+      "properties": [
+        {
+          "name": "type",
+          "attribute": "type",
+          "description": "bucket credit type",
+          "type": "string",
+          "default": "\"\""
+        },
+        {
+          "name": "title",
+          "attribute": "title",
+          "description": "bucket credit Title",
+          "type": "string",
+          "default": "\"\""
+        },
+        {
+          "name": "description",
+          "attribute": "description",
+          "description": "bucket credit description",
+          "type": "string",
+          "default": "\"\""
+        }
+      ],
+      "slots": [
+        {
+          "name": "icon",
+          "description": "Slot to add a image or a icon -> MaxWidth 50px"
+        }
+      ]
+    },
+    {
+      "name": "srui-two-lines-date",
+      "path": "./src\\components\\sbc\\cards\\two-lines-date\\two-lines-date.ts",
+      "attributes": [
+        {
+          "name": "label",
+          "description": "Element label",
+          "type": "string",
+          "default": "\"\""
+        },
+        {
+          "name": "value",
+          "description": "Date value",
+          "type": "string",
+          "default": "\"\""
+        },
+        {
+          "name": "textColor",
+          "description": "Text color",
+          "type": "string",
+          "default": "\"#545454)\""
+        }
+      ],
+      "properties": [
+        {
+          "name": "label",
+          "attribute": "label",
+          "description": "Element label",
+          "type": "string",
+          "default": "\"\""
+        },
+        {
+          "name": "value",
+          "attribute": "value",
+          "description": "Date value",
+          "type": "string",
+          "default": "\"\""
+        },
+        {
+          "name": "textColor",
+          "attribute": "textColor",
+          "description": "Text color",
+          "type": "string",
+          "default": "\"#545454)\""
+        }
+      ]
+    },
+    {
+      "name": "srui-two-lines-price",
+      "path": "./src\\components\\sbc\\cards\\two-lines-price\\two-lines-price.ts",
+      "attributes": [
+        {
+          "name": "label",
+          "description": "Element label",
+          "type": "string",
+          "default": "\"\""
+        },
+        {
+          "name": "currency",
+          "description": "Currency",
+          "type": "string",
+          "default": "\"\""
+        },
+        {
+          "name": "value",
+          "description": "Price value",
+          "type": "string",
+          "default": "\"\""
+        },
+        {
+          "name": "textColor",
+          "description": "Text color",
+          "type": "string",
+          "default": "\"#545454)\""
+        }
+      ],
+      "properties": [
+        {
+          "name": "label",
+          "attribute": "label",
+          "description": "Element label",
+          "type": "string",
+          "default": "\"\""
+        },
+        {
+          "name": "currency",
+          "attribute": "currency",
+          "description": "Currency",
+          "type": "string",
+          "default": "\"\""
+        },
+        {
+          "name": "value",
+          "attribute": "value",
+          "description": "Price value",
+          "type": "string",
+          "default": "\"\""
+        },
+        {
+          "name": "textColor",
+          "attribute": "textColor",
+          "description": "Text color",
+          "type": "string",
+          "default": "\"#545454)\""
+        }
+      ]
+    },
+    {
+      "name": "srui-sub-navigation",
+      "path": "./src\\components\\sub-navigation\\sub-navigation.ts"
+    },
+    {
+      "name": "srui-loader-icon",
+      "path": "./src\\components\\svg\\loader-icon.ts",
+      "description": "Simple svg loader icon"
+    },
+    {
+      "name": "srui-toolbar",
+      "path": "./src\\components\\toolbar\\toolbar.ts",
+      "description": "Toolbar on the top of the page",
+      "events": [
+        {
+          "name": "srui-open-nav"
+        }
+      ],
+      "slots": [
+        {
+          "name": "left-content",
+          "description": "Left side content (search)"
+        },
+        {
+          "name": "right-content",
+          "description": "Right side content (dropdown menus)"
+        }
+      ]
+    },
+    {
+      "name": "srui-add-shortcut",
+      "path": "./src\\components\\widgets\\shortcuts\\add-shortcut.ts",
+      "description": "Component to add widgets/shortcuts used to select and deselect shortcuts widgets",
+      "attributes": [
+        {
+          "name": "iconSrc",
+          "description": "Icon src (for image icons)",
+          "type": "string",
+          "default": "\"\""
+        },
+        {
+          "name": "icon",
+          "description": "Icon name (for font icons)",
+          "type": "string",
+          "default": "\"\""
+        },
+        {
+          "name": "label",
+          "description": "Element label",
+          "type": "string",
+          "default": "\"Add Shortcut\""
+        }
+      ],
+      "properties": [
+        {
+          "name": "iconSrc",
+          "attribute": "iconSrc",
+          "description": "Icon src (for image icons)",
+          "type": "string",
+          "default": "\"\""
+        },
+        {
+          "name": "icon",
+          "attribute": "icon",
+          "description": "Icon name (for font icons)",
+          "type": "string",
+          "default": "\"\""
+        },
+        {
+          "name": "label",
+          "attribute": "label",
+          "description": "Element label",
+          "type": "string",
+          "default": "\"Add Shortcut\""
+        }
+      ],
+      "events": [
+        {
+          "name": "srui-add-shortcut",
+          "description": "Event triggered when user clicks on the remove button"
+        }
+      ]
+    },
+    {
+      "name": "srui-shortcut-selector",
+      "path": "./src\\components\\widgets\\shortcuts\\shortcut-selector.ts",
+      "description": "Shortcut selector component, it appear on shortcuts container edit mode",
+      "attributes": [
+        {
+          "name": "iconSrc",
+          "description": "Icon src (for image icons)",
+          "type": "string",
+          "default": "\"\""
+        },
+        {
+          "name": "icon",
+          "description": "Icon name (for font icons)",
+          "type": "string",
+          "default": "\"\""
+        },
+        {
+          "name": "label",
+          "description": "Element label",
+          "type": "string",
+          "default": "\"\""
+        },
+        {
+          "name": "active",
+          "description": "If true, marks the the checkbox has checked.",
+          "type": "boolean",
+          "default": "false"
+        }
+      ],
+      "properties": [
+        {
+          "name": "iconSrc",
+          "attribute": "iconSrc",
+          "description": "Icon src (for image icons)",
+          "type": "string",
+          "default": "\"\""
+        },
+        {
+          "name": "icon",
+          "attribute": "icon",
+          "description": "Icon name (for font icons)",
+          "type": "string",
+          "default": "\"\""
+        },
+        {
+          "name": "label",
+          "attribute": "label",
+          "description": "Element label",
+          "type": "string",
+          "default": "\"\""
+        },
+        {
+          "name": "active",
+          "attribute": "active",
+          "description": "If true, marks the the checkbox has checked.",
+          "type": "boolean",
+          "default": "false"
+        }
+      ]
+    },
+    {
+      "name": "srui-shortcut",
+      "path": "./src\\components\\widgets\\shortcuts\\shortcut.ts",
+      "description": "Shortcut Widget component",
+      "attributes": [
+        {
+          "name": "iconSrc",
+          "description": "Icon src (for image icons)",
+          "type": "string",
+          "default": "\"\""
+        },
+        {
+          "name": "icon",
+          "description": "Icon name (for font icons)",
+          "type": "string",
+          "default": "\"\""
+        },
+        {
+          "name": "label",
+          "description": "Widget label",
+          "type": "string",
+          "default": "\"\""
+        },
+        {
+          "name": "type",
+          "description": "widget type [external, lock, plus] used on the icons",
+          "type": "string",
+          "default": "\"\""
+        },
+        {
+          "name": "editMode",
+          "description": "If true, Widget is on edit mode, more_button stays hidden,\r\nremove button is visible.",
+          "type": "boolean",
+          "default": "false"
+        },
+        {
+          "name": "loading",
+          "description": "If true, Widget is on loading mode, all button, icon and\r\nlabel are hidden,",
+          "type": "boolean",
+          "default": "false"
+        },
+        {
+          "name": "dragEnabled",
+          "description": "If true, Widget is on drag mode, all button are hidden,",
+          "type": "boolean",
+          "default": "false"
+        }
+      ],
+      "properties": [
+        {
+          "name": "types",
+          "type": "string[]",
+          "default": "[\"external\",\"lock\",\"plus\"]"
+        },
+        {
+          "name": "iconSrc",
+          "attribute": "iconSrc",
+          "description": "Icon src (for image icons)",
+          "type": "string",
+          "default": "\"\""
+        },
+        {
+          "name": "icon",
+          "attribute": "icon",
+          "description": "Icon name (for font icons)",
+          "type": "string",
+          "default": "\"\""
+        },
+        {
+          "name": "label",
+          "attribute": "label",
+          "description": "Widget label",
+          "type": "string",
+          "default": "\"\""
+        },
+        {
+          "name": "type",
+          "attribute": "type",
+          "description": "widget type [external, lock, plus] used on the icons",
+          "type": "string",
+          "default": "\"\""
+        },
+        {
+          "name": "editMode",
+          "attribute": "editMode",
+          "description": "If true, Widget is on edit mode, more_button stays hidden,\r\nremove button is visible.",
+          "type": "boolean",
+          "default": "false"
+        },
+        {
+          "name": "loading",
+          "attribute": "loading",
+          "description": "If true, Widget is on loading mode, all button, icon and\r\nlabel are hidden,",
+          "type": "boolean",
+          "default": "false"
+        },
+        {
+          "name": "dragEnabled",
+          "attribute": "dragEnabled",
+          "description": "If true, Widget is on drag mode, all button are hidden,",
+          "type": "boolean",
+          "default": "false"
+        }
+      ],
+      "events": [
+        {
+          "name": "srui-remove-shortcut",
+          "description": "Event triggered when user clicks on the remove button"
+        }
+      ],
+      "slots": [
+        {
+          "name": "more_button",
+          "description": "Slot for more_button component"
+        }
+      ]
+    },
+    {
+      "name": "mock-contact-info",
+      "path": "./src\\mock-components\\contact-info-block\\mock-contact-info.ts",
+      "attributes": [
+        {
+          "name": "mock",
+          "type": "boolean",
+          "default": "false"
+        },
+        {
+          "name": "editMode",
+          "type": "boolean",
+          "default": "false"
+        }
+      ],
+      "properties": [
+        {
+          "name": "mock",
+          "attribute": "mock",
+          "type": "boolean",
+          "default": "false"
+        },
+        {
+          "name": "editMode",
+          "attribute": "editMode",
+          "type": "boolean",
+          "default": "false"
+        }
+      ]
+    },
+    {
+      "name": "mock-main-layout",
+      "path": "./src\\mock-components\\main-layout\\mock-main-layout.ts",
+      "attributes": [
+        {
+          "name": "mobileOpen",
+          "type": "boolean",
+          "default": "false"
+        },
+        {
+          "name": "subNavigation",
+          "type": "boolean",
+          "default": "false"
+        },
+        {
+          "name": "fluid",
+          "type": "boolean",
+          "default": "false"
+        },
+        {
+          "name": "activeMenuId",
+          "type": "string",
+          "default": "\"1\""
+        },
+        {
+          "name": "siteSelector",
+          "type": "boolean",
+          "default": "false"
+        },
+        {
+          "name": "profileDropdown",
+          "type": "boolean",
+          "default": "false"
+        },
+        {
+          "name": "subnavId",
+          "type": "string",
+          "default": "\"1\""
+        },
+        {
+          "name": "agent",
+          "type": "boolean",
+          "default": "false"
+        },
+        {
+          "name": "agentView",
+          "type": "boolean",
+          "default": "false"
+        },
+        {
+          "name": "portalUsers",
+          "type": "boolean",
+          "default": "false"
+        },
+        {
+          "name": "customContentDropdownLabel",
+          "type": "boolean",
+          "default": "false"
+        }
+      ],
+      "properties": [
+        {
+          "name": "mobileOpen",
+          "attribute": "mobileOpen",
+          "type": "boolean",
+          "default": "false"
+        },
+        {
+          "name": "subNavigation",
+          "attribute": "subNavigation",
+          "type": "boolean",
+          "default": "false"
+        },
+        {
+          "name": "fluid",
+          "attribute": "fluid",
+          "type": "boolean",
+          "default": "false"
+        },
+        {
+          "name": "activeMenuId",
+          "attribute": "activeMenuId",
+          "type": "string",
+          "default": "\"1\""
+        },
+        {
+          "name": "siteSelector",
+          "attribute": "siteSelector",
+          "type": "boolean",
+          "default": "false"
+        },
+        {
+          "name": "profileDropdown",
+          "attribute": "profileDropdown",
+          "type": "boolean",
+          "default": "false"
+        },
+        {
+          "name": "subnavId",
+          "attribute": "subnavId",
+          "type": "string",
+          "default": "\"1\""
+        },
+        {
+          "name": "agent",
+          "attribute": "agent",
+          "type": "boolean",
+          "default": "false"
+        },
+        {
+          "name": "agentView",
+          "attribute": "agentView",
+          "type": "boolean",
+          "default": "false"
+        },
+        {
+          "name": "portalUsers",
+          "attribute": "portalUsers",
+          "type": "boolean",
+          "default": "false"
+        },
+        {
+          "name": "customContentDropdownLabel",
+          "attribute": "customContentDropdownLabel",
+          "type": "boolean",
+          "default": "false"
+        }
+      ]
+    },
+    {
+      "name": "mock-base",
+      "path": "./src\\mock-components\\mock-base.ts",
+      "attributes": [
+        {
+          "name": "mock",
+          "type": "boolean",
+          "default": "false"
+        }
+      ],
+      "properties": [
+        {
+          "name": "mock",
+          "attribute": "mock",
+          "type": "boolean",
+          "default": "false"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,38 @@
+* {
+  box-sizing: border-box;
+}
+
+.sr-contact-info-card {
+  display: flex;
+  flex-direction: column;
+  font-size: 1rem;
+  
+  padding: 20px 0 0;
+
+  &__block-title {
+    line-height: 1.56rem;
+    color: var(--srui-black-color, #000000);
+    padding: 3px 0 5px;
+    font-weight: 600;
+  }
+
+  &__block-content {
+    font-weight: 500;
+    color: var(--srui-gray4-color, #545454);
+    line-height: 1.5rem;
+    margin-bottom: 15px;
+  }
+
+  @media only screen and (min-width: 1024px) {
+    flex-direction: row;
+
+    &__block {
+      width: 50%;
+  
+      &:first-child {
+        padding-right: 20px;
+        word-break: break-word;
+      }
+    }
+  }
+}

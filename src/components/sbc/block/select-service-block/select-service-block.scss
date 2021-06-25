@@ -1,0 +1,26 @@
+* {
+  box-sizing: border-box;
+}
+.sr-select-service-block {
+  position: relative;
+  display: flex;
+  width: 100%;
+  height: auto;
+  flex-direction: column;
+  min-height: 125px;
+  &__description{
+    font-size: 0.875rem;
+    margin-bottom: 10px;
+    color: var(--srui-gray4-color, #545454);
+    line-height: 1.4;
+  }
+  &__sub-title{
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--srui-gray4-color, #545454);
+  }
+  &__content {
+    position: relative;
+    margin: 20px 0 20px;
+  }
+}

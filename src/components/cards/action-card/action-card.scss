@@ -1,0 +1,46 @@
+* {
+  box-sizing: border-box;
+}
+
+.sr-action-card {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--srui-white-color, #FFFFFF);
+  border-radius: var(--srui-content-box-radius, 6px);
+  box-shadow: var(--srui-default-shadow, 0 2px 4px 0 rgba(0,0,0,0.05));
+  padding: 25px 20px 30px;
+  text-align: center;
+
+  &__title {
+    font-size: 1.125rem;
+    font-weight: 700;
+    color: var(--srui-black-color, #000000);
+  }
+
+  &__description {
+    font-size: 1rem;
+    line-height: 1.35rem;
+    color: var(--srui-gray3-color, #848484);
+    font-weight: 500;
+    margin-top: 7px;
+    width: 50%;
+    min-width: 280px;
+  }
+
+  &__button {
+    margin-top: 15px;
+    min-width: 180px;
+  }
+
+  @media only screen and (min-width: 1024px) {
+    padding: 40px 40px 45px;
+
+    &__title {
+      font-size: 1.313rem;
+    }
+  }
+}

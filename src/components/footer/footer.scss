@@ -1,0 +1,23 @@
+*, ::before, ::after {
+  box-sizing: border-box;
+}
+.sr-footer {
+  padding: 18px 20px 24px;
+  text-align: center;
+  font-weight: 500;
+
+  &__copyright {
+    color: var(--srui-dark-color, #333333);
+    font-size: 1rem;
+    margin-bottom: 5px;
+  }
+
+  &__legal {
+    margin-bottom: 13px;
+  }
+
+  &__version {
+    font-size: 0.875rem;
+    color: var(--srui-gray2-color, #ADADAD);
+  }
+}

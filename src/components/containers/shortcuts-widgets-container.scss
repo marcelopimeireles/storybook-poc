@@ -1,0 +1,106 @@
+* {
+    box-sizing: border-box;
+}
+.sr-shortcuts-widgets-container {
+    width: 100%;
+    height: 100%;
+    justify-content: flex-start;
+    display: flex;
+    flex-wrap: wrap;
+    padding-bottom: 50px;
+    position: relative;
+    // background-color: var(--srui-content-background, #F8F8F8);
+
+    &__widgets {
+        width: 100%;
+        display: grid;
+        flex-flow: row wrap;
+        justify-content: flex-start;
+        grid-gap: .525rem;
+        grid-template-columns: repeat(auto-fit, minmax(33%, 1fr));
+    }
+
+    &__bottom {
+        position: absolute;
+        width: 100%;
+        justify-content: center;
+        background: linear-gradient(0deg, #F8F8F8 0%, rgba(248,248,248,0) 0%);
+        transition: all 250ms cubic-bezier(.27,.01,.38,1.06);
+        bottom: 0;
+        height: 60px;
+        display: none;
+    }
+
+}
+.sr-shortcuts-widgets-container--edit{
+    padding-bottom: 70px;
+    .sr-shortcuts-widgets-container__bottom {
+        z-index: 10;
+        height: 100px;
+        width: 100%;
+        position: sticky;
+        bottom: 0;
+        left: 0px;
+        display: none;
+        right: 0;
+        background: linear-gradient(0deg, #F8F8F8 0%, rgba(248,248,248,0) 100%);
+        align-items: center;
+        padding: 0px 0 30px;
+
+        srui-std-button {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            display: block;
+            transform: translate(-50%, -50%);
+        }
+    }
+}
+@media only screen and (min-width: 370px) {
+    .sr-shortcuts-widgets-container {
+        &__widgets {
+            grid-template-columns: repeat(auto-fit, minmax(33%, 1fr));
+        }
+    }
+}
+@media only screen and (min-width: 724px) {
+    .sr-shortcuts-widgets-container {
+        &__widgets {
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        }
+    }
+}
+@media only screen and (min-width: 1024px) {
+    .sr-shortcuts-widgets-container {
+        height: 100%;
+        justify-content: flex-start;
+        display: flex;
+        flex-wrap: wrap;
+        padding-bottom: 75px;
+
+        &__widgets {
+            width: 100%;
+            margin: 0 auto;
+            display: grid;
+            flex-flow: row wrap;
+            justify-content: flex-start;
+            grid-gap: 1rem;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        }
+        &__bottom {
+            display: flex;
+        }
+    }
+    .sr-shortcuts-widgets-container--edit {
+        .sr-shortcuts-widgets-container__bottom{
+            display: flex;
+        }
+    }
+    .sr-shortcuts-widgets-container {
+        &--short {
+            .sr-shortcuts-widgets-container__widgets {
+                grid-template-columns: repeat(auto-fit, minmax(300px, 0.33fr));
+            }
+        }
+    }
+}

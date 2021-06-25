@@ -1,0 +1,11 @@
+* {
+  box-sizing: border-box;
+}
+.sr-menu-block {
+  width: 100%;
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  background-color: var(--srui-white-color, #FFFFFF);
+}
+

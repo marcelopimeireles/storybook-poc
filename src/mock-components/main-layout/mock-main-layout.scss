@@ -1,0 +1,12 @@
+* {
+  box-sizing: border-box;
+}
+.sub-navigation-link {
+  margin-right: 20px;
+  &:last-child {
+    margin-right: 0;
+  }
+}
+.language-holder *:not(:last-child) {
+  margin-right: 3px;
+}

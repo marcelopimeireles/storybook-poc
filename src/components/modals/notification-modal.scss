@@ -1,0 +1,47 @@
+* {
+    box-sizing: border-box;
+    transition: all 250ms cubic-bezier(.27,.01,.38,1.06);
+}
+:host {
+    display: inline-flex;
+    width: 100%;
+}
+.sr-notification-modal {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-items: center;
+    width: 100%;
+    align-items: center;
+    font-family: var(--srui-default-font-family, 'AvenirNext');
+    &__icon{
+        &--error{
+            color: var(--srui-invalid-color, #FC323C) !important;
+        }
+        &--success{
+            color: var(--srui-valid-color, #00D9A2) !important;;
+        }
+        &--alert{
+            color: var(--srui-secondary-color, #FAA600) !important;;
+        }
+        &--info{
+            color: var(--srui-primary-color, #E6003C) !important;;
+        }
+    }
+    ::slotted([slot=actions]){
+        width: 100%;
+        display: flex;
+        justify-content: space-evenly;
+        flex-flow: row;
+    }
+}
+@media only screen and (max-width: 600px) {
+    .sr-notification-modal {
+        ::slotted([slot=actions]){
+            width: 100%;
+            flex-flow: column;
+            justify-content: center;
+        }
+    }
+}

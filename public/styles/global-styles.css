@@ -1,0 +1,91 @@
+html {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-family: 'AvenirNext';
+    --srui-default-font-family: 'AvenirNext';
+    /*line height*/
+    --srui-default-line-height: 1;
+    --srui-12-line-height: 1.2;
+    --srui-14-line-height: 1.4;
+    --srui-16-line-height: 1.6;
+    /*H1 -> H6*/
+    --srui-h1: 56px;
+    --srui-h2: 56px;
+    --srui-h3: 56px;
+    --srui-h4: 36px;
+    --srui-h5: 56px;
+    --srui-h6: 56px;
+    /* Colors */
+    --srui-primary-color: #E6003C;
+    --srui-primary-color-dark: #AA1937;
+    --srui-secondary-color: #FAA600;
+    --srui-secondary-color-light: #FFC805;
+    --srui-promo-color: #64B9E6;
+    --srui-valid-color: #00D9A2;
+    --srui-invalid-color: #FC323C;
+    --srui-alpha-color: transparent;
+    --srui-modal-info-color: #888888;
+
+    /* Button colors */
+    --srui-alpha-color-active: #EEEEEE;
+    --srui-link-primary-hover: #FF0043;
+
+    /* Grayscale */
+    --srui-white-color:  #FFFFFF;
+    --srui-bright-color:  #F8F8F8;
+    --srui-gray1-color: #E5E5E5;
+    --srui-gray2-color: #ADADAD;
+    --srui-gray3-color: #848484;
+    --srui-gray4-color: #545454;
+    --srui-dark-color: #333333;
+    --srui-black-color: #000000;
+
+    /* Gradients */
+    --srui-primary-gradient: linear-gradient(315deg, #FBAF01 0%, #F36B15 30.87%, #D4073B 64.32%, #E6003C 100%);
+    --srui-sbc-gradient: linear-gradient(79deg, #FFC505 0%, #F47416 39%, #D74126 68%, #BA2731 100%) 0% 0% no-repeat padding-box;
+
+    /* Shadows */
+    --srui-default-shadow: 0 2px 4px 0 rgba(0,0,0,0.05);
+    --srui-hover-shadow: 0 4px 12px 0 rgba(0,0,0,0.1);
+    --srui-active-shadow: 0 8px 24px 0 rgba(0,0,0,0.15);
+
+    /* Forms */
+    --srui-form-border-default: 1px solid var(--srui-gray1-color);
+    --srui-form-border-hover: 1px solid var(--srui-gray2-color);
+    --srui-form-border-focus: var(--srui-form-border-hover);
+    --srui-form-border-active: 1px solid var(--srui-gray4-color);
+
+    --srui-form-input-radius: 0.375rem;
+
+    --srui-form-input-background-color: var(--srui-white-color);
+    --srui-form-checked-bg-color: var(--srui-primary-color);
+
+    --srui-form-label-color:  var(--srui-gray3-color);
+    --srui-form-active-label-color:  var(--srui-black-color);
+    --srui-form-disabled-label-color: var(--srui-gray2-color);
+    --srui-form-active-disabled-label-color: var(--srui-dark-color);
+    --srui-form-disabled-bg-color: var(--srui-bright-color);
+
+    /* General */
+    --srui-content-background: var(--srui-bright-color);
+    --srui-toolbar-background: var(--srui-white-color);
+
+    --srui-content-box-radius: 6px;
+
+    /* Icons */
+    --srui-icon-font: 'srui-icon-font';
+    --srui-icon-size-tiny: 16px;
+    --srui-icon-size-small: 24px;
+    --srui-icon-size-medium: 32px;
+    --srui-icon-size-large: 64px;
+
+    /* Content width */
+    --srui-content-max-width: 1220px;
+    --srui-sidebar-width: 260px;
+
+    /* Z-indexes */
+    --srui-zindex-header: 100;
+    --srui-zindex-navigation: 110;
+    --srui-zindex-modal: 200;
+
+}

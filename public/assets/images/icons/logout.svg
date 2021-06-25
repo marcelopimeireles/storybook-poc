@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 64 (93537) - https://sketch.com -->
+    <title>Icon/Logout-24px</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Icon/Logout-24px" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Group-4" transform="translate(5.000000, 6.000000)" fill="#848484">
+            <path d="M11,1.5 L15,6 L11,10.5 L11,7 L5,7 C4.44771525,7 4,6.55228475 4,6 C4,5.44771525 4.44771525,5 5,5 L11,5 L11,1.5 Z" id="Combined-Shape"></path>
+            <path d="M7,-1 C7.55228475,-1 8,-0.55228475 8,0 C8,0.512835839 7.61395981,0.935507161 7.11662113,0.993272269 L7,1 L2,1 C1.45058946,1 1.0634043,1.27593825 1.0070883,1.53559431 L1,1.6 L1,10.4 C1,10.654913 1.34492281,10.95046 1.86612465,10.9944204 L2,11 L7,11 C7.55228475,11 8,11.4477153 8,12 C8,12.5128358 7.61395981,12.9355072 7.11662113,12.9932723 L7,13 L2,13 C0.445831467,13 -0.897016599,11.971771 -0.994354908,10.5640737 L-1,10.4 L-1,1.6 C-1,0.164072581 0.285286269,-0.917338931 1.82166952,-0.995473765 L2,-1 L7,-1 Z" id="Path" fill-rule="nonzero"></path>
+        </g>
+    </g>
+</svg>
